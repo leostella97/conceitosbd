@@ -306,3 +306,20 @@ O <b>modelo relacional</b> é um modelo de dados que organiza as informações e
 
 Esses conceitos são <b>fundamentais</b> para o modelo relacional e são utilizados para <i>representar e manipular</i> dados em bancos de dados relacionais.
 
+## Primeiros Passos com SQL
+SQL é uma <b>linguagem de consulta estruturada</b> usada para <i>gerenciar e manipular</i> dados em bancos de dados relacionais. Aqui estão alguns passos para começar com SQL:
+
+<b>• Instale um banco de dados:</b> Você precisa instalar um banco de dados para começar a <b>trabalhar com SQL</b>. Existem muitos bancos de dados disponíveis, como <i>MySQL, Oracle, SQL Server, PostgreSQL, etc.</i> Escolha um banco de dados e instale-o em seu computador.
+
+<b>• Aprenda a sintaxe SQL:</b> A <i>sintaxe SQL</i> é a maneira como você escreve consultas SQL para interagir com o banco de dados. Existem muitos recursos disponíveis on-line para aprender a sintaxe SQL, como <i>tutoriais, cursos e documentação do banco de dados<i>.
+
+<b>• Comece com comandos básicos:</b> Para começar, aprenda alguns comandos básicos do SQL, como <i>SELECT, INSERT, UPDATE e DELETE</i>. Esses comandos permitem <i>selecionar dados, inserir novos dados, atualizar dados existentes e excluir dados do banco de dados</i>.
+
+<b>• Pratique com exemplos:</b> Para aprender SQL, você precisa praticar com exemplos. Use exemplos de bancos de dados ou crie um banco de dados simples para <i>praticar seus comandos SQL</i>.
+
+<b>• Use ferramentas de gerenciamento de banco de dados:</b> Para interagir com o banco de dados, você pode usar ferramentas de gerenciamento de banco de dados, como o <i>MySQL Workbench, o Oracle SQL Developer ou o Microsoft SQL Server Management Studio</i>.
+
+<b>• Aprenda sobre relações:</b> Os bancos de dados relacionais são projetados para armazenar dados em tabelas relacionadas. Aprenda sobre relacionamentos de tabela e como criar consultas que unem várias tabelas. Um bom exemplo é o Modelo Entidade Relacionamento que vimos anteriormente.
+
+<img src="img/yoda-pratice.jpeg">
+
