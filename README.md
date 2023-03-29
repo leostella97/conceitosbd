@@ -18,6 +18,8 @@
 	<a href="https://github.com/leostella97/conceitosbd#explorando-queries-com-sql"><b>Explorando Queries com SQL</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#comandos-baseados-em-opera%C3%A7%C3%B5es-matem%C3%A1ticas-union-intersection-e-except">Comandos Baseados em Operações Matemáticas: UNION, INTERSECTION e EXCEPT</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#elaborando-queries-sql-com-express%C3%B5es">Elaborando Queries SQL com Expressões</a></li>
+	<br>
+	<a href="">Criando Queries com Funções e Cláusulas de Agrupamentos</a>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
@@ -481,3 +483,85 @@ Esses comandos podem ser muito <b>úteis para realizar</b> operações mais avan
 	GROUP BY mes;
 </code>
 
+## Criando Queries com Funções e Cláusulas de Agrupamentos
+As funções permitem <b>realizar cálculos e operações</b> em colunas de dados, enquanto as cláusulas de agrupamento permitem <i>agrupar os resultados de uma query</i> com base em <i>uma ou mais</i> colunas específicas.
+
+Algumas <i>funções comuns</i> em SQL incluem:
+<b>• SUM():</b> soma os valores de uma coluna
+<b>• AVG():</b> calcula a média dos valores de uma coluna
+<b>• COUNT():</b> conta o número de registros em uma coluna
+<b>• MAX():</b> retorna o valor máximo de uma coluna
+<b>• MIN():</b> retorna o valor mínimo de uma coluna
+
+Por exemplo, para <b>obter a soma</b> dos salários de todos os funcionários de uma empresa, poderíamos usar a função <b>SUM()</b> da seguinte forma:
+<code>
+	SELECT SUM(salario) FROM funcionarios;
+</code>
+Já as cláusulas de agrupamento, como <b>GROUP BY</b>, são usadas para agrupar os <b>resultados da query</b> com base em uma ou mais colunas. Por exemplo, para <i>obter a soma</i> dos salários de cada departamento da empresa, poderíamos usar a cláusula <b>GROUP BY</b> da seguinte forma:
+<code>
+	SELECT departamento, SUM(salario) FROM funcionarios GROUP BY departamento;
+</code>
+Isso <i>retornaria uma tabela</i> com o nome de cada departamento e a <i>soma dos salários</i> de todos os funcionários desse departamento.
+
+### ORDER BY: Cláusulas de ordenação com SQL
+O <b>"ORDER BY"</b> é uma <i>cláusula do SQL</i> que é usada para classificar os resultados de uma consulta em uma <i>ordem específica</i>. Essa cláusula é usada em conjunto com a cláusula <b>"SELECT"</b> para <i>especificar as colunas</i> que devem ser <i>retornadas e a ordem</i> em que elas devem ser classificadas.
+
+A <b>sintaxe básica</b> do "ORDER BY" é a seguinte:
+<code>
+	SELECT coluna1, coluna2, coluna3
+	FROM tabela
+	ORDER BY coluna1 DESC, coluna2 ASC;
+</code>
+
+Neste exemplo, estamos selecionando as colunas <b>"coluna1", "coluna2" e "coluna3"</b> da tabela especificada, e <b>ordenando os resultados</b> pela coluna1 em <b>ordem descendente (DESC)</b> e pela coluna2 em ordem <b>ascendente (ASC)</b>.
+
+Podemos <i>ordenar os resultados</i> de uma consulta usando uma ou mais colunas e especificar a ordem de classificação como <b>ascendente</b> ou <b>descendente</b>. Quando várias colunas são usadas para classificação, a ordem das colunas na cláusula <b>"ORDER BY"</b> determina a prioridade da classificação.
+
+É importante lembrar que a cláusula <b>"ORDER BY"</b> é usada apenas para <i>classificar os resultados de uma consulta</i> e <i>não afeta a estrutura ou o conteúdo da tabela subjacente</i>.
+
+### GROUP BY: Cláusulas de ordenação com SQL
+O <b>"GROUP BY"</b> é uma cláusula do SQL que permite <b>agrupar os resultados</b> de uma consulta com base no valor de <i>uma ou mais</i> colunas. Essa cláusula é frequentemente usada em conjunto com funções de agregação, como <i>"SUM", "AVG", "COUNT" e "MAX"</i>, para resumir dados em grupos específicos.
+
+A <b>sintaxe básica</b> do "GROUP BY" é a seguinte:
+<code>
+SELECT coluna1, coluna2, funcao_agregada(coluna3)
+FROM tabela
+GROUP BY coluna1, coluna2;
+</code>
+
+Neste exemplo, estamos selecionando as colunas <b>"coluna1" e "coluna2"</b> da tabela especificada, e aplicando uma <b>função de agregação (por exemplo, "SUM")</b> à coluna3, <b>agrupando os resultados</b> por "coluna1" e "coluna2".
+
+Ao usar a cláusula <b>"GROUP BY"</b>, devemos especificar todas as colunas que <i>não estão envolvidas</i> em funções de agregação na cláusula <b>"SELECT"</b>. Caso contrário, o SQL <i>gerará um erro</i>.
+
+A cláusula <b>"GROUP BY"</b> é uma <b>ferramenta poderosa</b> para resumir dados em grupos específicos. Com ela, podemos <b>obter informações</b> úteis sobre subconjuntos de dados e <b>tomar decisões</b> de negócios mais informadas. No entanto, é importante usá-la com <b>cuidado</b> e <b>entender</b> como ela <i>afeta os resultados da consulta</i>.
+
+Também é possível usar a cláusula <b>"HAVING"</b> em conjunto com a cláusula <b>"GROUP BY"</b> para <b>especificar uma condição</b> que deve ser satisfeita pelos grupos resultantes. A cláusula <b>"HAVING"</b> é <i>semelhante</i> à cláusula <b>"WHERE"</b>, mas é aplicada aos resultados agrupados em vez dos dados brutos.
+
+A <b>sintaxe básica</b> do "HAVING" é a seguinte:
+<code>
+SELECT coluna1, funcao_agregada(coluna2)
+FROM tabela
+GROUP BY coluna1
+HAVING funcao_agregada(coluna2) > valor;
+</code>
+
+Neste exemplo, estamos selecionando a <b>"coluna1"</b> da tabela especificada e aplicando uma <b>função de agregação (por exemplo, "SUM")</b> à "coluna2", <b>agrupando</b> os resultados por "coluna1". Em seguida, estamos <b>filtrando os resultados</b> usando a cláusula <b>"HAVING"</b> para incluir apenas os grupos com uma soma de "coluna2" <b>maior que</b> um determinado valor.
+
+A cláusula <b>"GROUP BY"</b> pode ser usada para <b>resumir dados</b> em grupos específicos e ajudar a <b>tomar decisões</b> de negócios mais informadas. No entanto, é importante <i>usá-la com cuidado e entender</i> como ela afeta os resultados da consulta.
+
+### Having Statment
+A declaração <b>"HAVING"</b> é usada em consultas SQL para <b>filtrar grupos</b> de resultados após o uso da cláusula <b>"GROUP BY"</b>. A cláusula <b>"HAVING"</b> é usada para <i>especificar uma condição que deve ser atendida</i> pelos grupos resultantes.
+
+A principal diferença entre a cláusula <b>"WHERE"</b> e a cláusula <b>"HAVING"</b> é que a primeira é usada para <i>filtrar linhas individuais</i>, enquanto a última é usada para <i>filtrar grupos de resultados</i>. Além disso, a cláusula "HAVING" é <b>sempre usada após</b> a cláusula "GROUP BY".
+
+A <b>sintaxe básica</b> da cláusula "HAVING" é a seguinte:
+<code>
+SELECT coluna1, coluna2, ...
+FROM tabela
+GROUP BY coluna1, coluna2, ...
+HAVING condição;
+</code>
+
+A condição especificada na cláusula "HAVING" pode <i>incluir funções de agregação, como SUM, COUNT, AVG, MAX, MIN, entre outras</i>. Além disso, a condição pode incluir <i>operadores lógicos, como AND, OR e NOT</i>.
+
+Em resumo, a cláusula "HAVING" é uma <b>ferramenta útil</b> para filtrar grupos de resultados em consultas SQL e <i>deve ser usada após a cláusula</i> "GROUP BY".
