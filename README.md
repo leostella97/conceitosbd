@@ -1,6 +1,7 @@
 # Conceitos de Banco de Dados
 
-<ul><a href="https://github.com/leostella97/conceitosbd#introdu%C3%A7%C3%A3o-ao-banco-de-dados"><b>Introdução</a>
+<ul>
+	<a href="https://github.com/leostella97/conceitosbd#introdu%C3%A7%C3%A3o-ao-banco-de-dados"><b>Introdução</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#sistema-de-gerenciamento-de-banco-de-dados-sgbd">Sistema de Gerenciamento de Banco de Dados (SGBD)</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelagem-de-dados-para-banco-de-dados">Modelagem de Dados para Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#arquitetura-para-banco-de-dados">Arquitetura para Banco de Dados
@@ -61,3 +62,7 @@ A camada lógica inclui o software que <b>gerencia o acesso e a manipulação</b
 A camada de visão <b>refere-se à interface</b> que permite que os usuários visualizem e interajam com os dados. Isso inclui aplicativos de software, páginas da web e outros meios pelos quais os usuários <i>podem acessar o banco de dados (por exemplo o PHPMyAdmin e o MySQL Workbench)</i>.
 
 Uma arquitetura bem projetada pode <b>garantir</b> um <i>desempenho eficiente, segurança, integridade e disponibilidade</i> dos dados em um banco de dados.
+
+# Modelo de Entidade Realcional (MER) com Banco de Dados
+
+## Fundamentos de Modelagem e Projeto de Banco de Dados
