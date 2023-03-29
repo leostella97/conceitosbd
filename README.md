@@ -9,7 +9,9 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#fundamentos-de-modelagem-e-projeto-de-banco-de-dados">Fundamentos de Modelagem e Projeto de Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelo-de-entidade-relacionamento-com-banco-de-dados">Modelo de Entidade Relacionamento com Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelo-de-relacionamento-de-entidade-aprimorado-com-banco-de-dados">Modelo de Relacionamento de Entidade Aprimorado com Banco de Dados</a></li>
-</a></li>
+	<a href="">Explorando a Linguagem de Consulta a Banco de Dados SQL</a>
+	<li><a href="">Modelo Relacional e Mapeamento Relacional com Banco de Dados</a></li>
+	<li><a href="">Primeiros Passos com SQL</a></li>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
@@ -255,3 +257,52 @@ Por exemplo, imagine que temos uma tabela de produtos em um sistema de vendas on
 Para isso, criamos uma <i>tabela de Categorias para armazenar todos os tipos de cores possíveis</i>, como "vermelho", "azul", "verde", etc. Em seguida, associamos essa tabela à coluna "cor" da tabela de produtos, indicando que apenas <i>valores que estejam</i> na tabela de Categorias <i>podem ser inseridos</i> nessa coluna. Dessa forma, <b>podemos garantir</b> que apenas valores válidos de cor sejam inseridos na tabela de produtos, <i>mesmo que alguns produtos tenham mais de uma cor</i>.
 
 A modelagem de Union types usando Categorias é uma <b>técnica poderosa</b> que pode simplificar a modelagem de dados em bancos de dados, reduzindo a necessidade de criar colunas separadas para diferentes tipos de dados. No entanto, é <b>importante lembrar</b> que essa técnica deve ser usada com cuidado e apenas em situações em que os dados são variáveis e não estruturados, pois em outras situações pode ser mais adequado usar colunas separadas para cada tipo de dado.
+
+## Explorando a Linguagem de Consulta a Banco de Dados SQL
+## Modelo Relacional e Mapeamento Relacional com Banco de Dados
+
+O <b>Modelo Relacional</b> é um modelo de dados utilizado em bancos de dados que <i>representa as informações em forma de tabelas</i>, onde cada tabela representa uma entidade e cada coluna representa um atributo dessa entidade. As relações entre as tabelas <i>são estabelecidas por meio de chaves estrangeiras</i>, que são utilizadas para relacionar registros em diferentes tabelas.
+
+O <b>Mapeamento Relacional</b> é o processo de <i>converter o modelo de dados de uma aplicação</i> em um modelo que possa ser armazenado em um banco de dados relacional. Esse processo envolve a <i>criação de tabelas e a definição das relações</i> entre elas, de forma a garantir que os dados sejam armazenados de forma <i>eficiente e consistente</i>.
+
+Para realizar o <b>Mapeamento Relacional</b>, é necessário definir as tabelas que serão utilizadas para <i>armazenar os dados da aplicação e as relações entre essas tabelas</i>. Para isso, é importante entender a estrutura da aplicação e como os dados são relacionados entre si.
+
+Por exemplo, imagine que temos uma aplicação de <b>gerenciamento de vendas</b>, onde cada venda é realizada por um vendedor e possui diversos produtos vendidos. Nesse caso, podemos definir três tabelas: <i>uma para os vendedores, uma para os produtos e uma para as vendas</i>. A tabela de vendas teria chaves estrangeiras para as tabelas de vendedores e produtos, estabelecendo as relações entre essas entidades.
+
+<code>
+	CREATE TABLE vendas (
+    id_venda INT PRIMARY KEY,
+    id_vendedor INT,
+    id_produto INT,
+    quantidade INT,
+    valor_total DECIMAL(10,2),
+    data_venda DATE,
+    FOREIGN KEY (fk_id_vendedor) REFERENCES vendedores (id_vendedor),
+    FOREIGN KEY (fk_id_produto) REFERENCES produtos (id_produto)
+);
+</code>
+Sendo -
+<b>id_venda:</b> é a chave primária da tabela de vendas, usada para identificar exclusivamente cada venda.
+<b>fk_id_vendedor:</b> é a chave estrangeira que se relaciona com a tabela de vendedores, indicando o vendedor responsável pela venda.
+<b>fk_id_produto:</b> é a chave estrangeira que se relaciona com a tabela de produtos, indicando o produto vendido.
+<b>quantidade:</b> é a quantidade do produto vendido.
+<b>valor_total:</b> é o valor total da venda.
+<b>data_venda:</b> é a data em que a venda foi realizada.
+
+As cláusulas <b>FOREIGN KEY</b> são usadas para <i>estabelecer as relações</i> entre as tabelas. Elas especificam que as colunas id_vendedor e id_produto são <b>chaves estrangeiras</b> que se <i>relacionam</i> com as tabelas vendedores e produtos.
+
+Além disso, é importante <b>definir os tipos</b> de dados que serão utilizados em cada coluna da tabela, garantindo que os dados sejam armazenados de forma <i>consistente e eficiente</i>. É comum utilizar tipos de dados padrão do banco de dados, como <b>VARCHAR</b> para texto e <b>INT</b> para números inteiros.
+
+O <b>Mapeamento Relacional</b> é uma etapa importante no desenvolvimento de uma aplicação que utiliza banco de dados, pois <i>define como os dados serão armazenados e relacionados entre si</i>. Um bom mapeamento pode <i>garantir a eficiência e consistência dos dados</i>, enquanto um mapeamento inadequado pode levar a <i>problemas de desempenho e inconsistência de dados</i>.
+
+### Comceitos do modelo relacional: Tupla, Atributo e Relação
+O <b>modelo relacional</b> é um modelo de dados que organiza as informações em tabelas chamadas de relações. Nesse modelo, existem três conceitos fundamentais: <b>tupla, atributo e relação</b>.
+
+<b>• Tupla:</b> é uma linha específica de uma relação e representa uma <i>entidade ou um conjunto</i> de entidades relacionadas. Por exemplo, em uma tabela de clientes, cada tupla representaria um cliente específico.
+
+<b>• Atributo:</b> é uma <b>coluna específica</b> de uma relação e representa uma <i>característica ou propriedade</i> da entidade representada pela tupla. Por exemplo, em uma tabela de clientes, os atributos poderiam ser o <i>nome, endereço, telefone e e-mail</i>.
+
+<b> • Relação:</b> é uma tabela que contém um <b>conjunto de tuplas e seus atributos</b>. Ela representa um conjunto de entidades que têm <b>características semelhantes</b>. Por exemplo, uma tabela de clientes pode ser uma <i>relação que contém informações</i> sobre todos os clientes de uma empresa.
+
+Esses conceitos são <b>fundamentais</b> para o modelo relacional e são utilizados para <i>representar e manipular</i> dados em bancos de dados relacionais.
+
