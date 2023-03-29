@@ -11,7 +11,7 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#modelo-de-relacionamento-de-entidade-aprimorado-com-banco-de-dados">Modelo de Relacionamento de Entidade Aprimorado com Banco de Dados</a></li>
 	<a href="">Explorando a Linguagem de Consulta a Banco de Dados SQL</a>
 	<li><a href="">Modelo Relacional e Mapeamento Relacional com Banco de Dados</a></li>
-	<li><a href="">Primeiros Passos com SQL</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#primeiros-passos-com-sql">Primeiros Passos com SQL</a></li>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
@@ -241,7 +241,7 @@ Por exemplo, suponha que você tenha uma tabela <b>"Funcionários"</b> em seu ba
 <br>
 <b>• Rede de especialização:</b> Além da <i>hierarquia de cargos</i>, você pode definir uma <i>rede de especialização</i> para cada funcionário. Por exemplo, você pode ter habilidades especializadas como <i>"Programação", "Design", "Gestão de Projetos" e "Vendas"</i>. Cada funcionário pode ter <i>habilidades diferentes</i> e uma classificação para cada habilidade. Por exemplo, um funcionário pode ter uma classificação de <b>3</b> em <b>"Programação"</b> e uma classificação de <b>2</b> em <b>"Design"</b>. Essa classificação pode ser usada para determinar quais funcionários são mais <b>adequados</b> para determinadas tarefas ou projetos.
 
-Essa hierarquia e rede de especialização podem ser representadas em uma única tabela <b>"Funcionários"</b> com campos adicionais para refletir a <i>posição hierárquica e habilidades especializadas</i> de cada funcionário.
+Essa hierarquia e rede de especialização podem ser representadas em uma única tabela <b>"Funcionários"</b> com campos adicionais para refletir a <i>posição hierárquica e habilidades especializadas</i> de cada funcionário.</b>
 
 ### Modelagem de Union types usando Categorias
 <b>Union Types</b> em bancos de dados é um <i>conceito relacionado a tipos de dados</i> que podem armazenar <i>mais de um tipo de informação em uma única coluna</i>. Esses tipos são chamados de <i>tipos de união ou tipos compostos</i>, pois eles unem diferentes tipos de dados em um único tipo.
@@ -311,7 +311,7 @@ SQL é uma <b>linguagem de consulta estruturada</b> usada para <i>gerenciar e ma
 
 <b>• Instale um banco de dados:</b> Você precisa instalar um banco de dados para começar a <b>trabalhar com SQL</b>. Existem muitos bancos de dados disponíveis, como <i>MySQL, Oracle, SQL Server, PostgreSQL, etc.</i> Escolha um banco de dados e instale-o em seu computador.
 
-<b>• Aprenda a sintaxe SQL:</b> A <i>sintaxe SQL</i> é a maneira como você escreve consultas SQL para interagir com o banco de dados. Existem muitos recursos disponíveis on-line para aprender a sintaxe SQL, como <i>tutoriais, cursos e documentação do banco de dados<i>.
+<b>• Aprenda a sintaxe SQL:</b> A <i>sintaxe SQL</i> é a maneira como você escreve consultas SQL para interagir com o banco de dados. Existem muitos recursos disponíveis on-line para aprender a sintaxe SQL, como <i>tutoriais, cursos e documentação do banco de dados</i>.
 
 <b>• Comece com comandos básicos:</b> Para começar, aprenda alguns comandos básicos do SQL, como <i>SELECT, INSERT, UPDATE e DELETE</i>. Esses comandos permitem <i>selecionar dados, inserir novos dados, atualizar dados existentes e excluir dados do banco de dados</i>.
 
@@ -322,4 +322,56 @@ SQL é uma <b>linguagem de consulta estruturada</b> usada para <i>gerenciar e ma
 <b>• Aprenda sobre relações:</b> Os bancos de dados relacionais são projetados para armazenar dados em tabelas relacionadas. Aprenda sobre relacionamentos de tabela e como criar consultas que unem várias tabelas. Um bom exemplo é o Modelo Entidade Relacionamento que vimos anteriormente.
 
 <img src="img/yoda-pratice.jpg">
+
+### Sublinguagens: Classificação de SQL - DDL
+<b>DDL (Data Definition Language)</b> é uma <i>sublinguagem do SQL (Structured Query Language)</i> que é usada para <i>definir a estrutura e as características</i> dos dados em um banco de dados. Ela é composta por comandos que permitem a <i>criação, alteração e exclusão de objetos do banco de dados</i>, como <i>tabelas, índices, chaves primárias e estrangeiras, entre outros</i>.
+
+Os <b>principais comandos</b> da DDL são:
+<b>• CREATE:</b> usado para <b>criar objetos</b> no banco de dados, como <i>tabelas, índices, visões e procedimentos armazenados</i>.
+
+<b>• ALTER:</b> usado para <b>alterar a estrutura</b> dos objetos do banco de dados, como <i>adicionar ou remover</i> colunas de uma tabela.
+
+<b>• DROP:</b> usado para <b>excluir objetos</b> do banco de dados, como <i>tabelas, visões e índices</i>.
+
+<b>• TRUNCATE:</b> usado para <b>excluir todos os dados</b> de uma tabela sem excluir a própria tabela.
+
+<b>• RENAME:</b> usado para <b>renomear objetos</b> do banco de dados, como tabelas e colunas.
+
+Esses comandos da DDL são <b>muito importantes</b> para o gerenciamento de um banco de dados, pois permitem a <i>criação, alteração e exclusão</i> de objetos do banco de dados de forma <i>eficiente e organizada</i>. Além disso, eles garantem que os dados armazenados estejam estruturados de acordo com as necessidades do usuário e da aplicação que utiliza o banco de dados.
+
+Segue um exemplo:
+Suponha que você queira criar uma tabela chamada <b>"Clientes"</b> para armazenar informações sobre os clientes de uma loja. Você pode usar o seguinte código DDL do SQL para criar a tabela:
+<code>
+	CREATE TABLE Clientes (
+   id INT PRIMARY KEY,
+   nome VARCHAR(50),
+   email VARCHAR(50),
+   telefone VARCHAR(15),
+   endereco VARCHAR(100)
+);
+</code>
+Este código cria uma tabela chamada "Clientes" com cinco colunas: "id", "nome", "email", "telefone" e "endereco". A coluna "id" é definida como a chave primária da tabela usando o comando "PRIMARY KEY". As outras colunas são definidas como campos de texto usando o tipo "VARCHAR" e o tamanho máximo de cada campo é especificado entre parênteses.
+
+Suponha que você precise <b>adicionar uma nova coluna</b> chamada <b>"idade"</b> à tabela <b>"Clientes"</b> que criamos anteriormente. Você pode usar o seguinte código DDL do SQL para adicionar a nova coluna:
+<code>
+	ALTER TABLE Clientes
+ADD idade INT;
+</code>
+Este código usa o comando <b>"ALTER TABLE"</b> para <i>modificar a tabela</i> <b>"Clientes"</b> e <b>adiciona uma nova</b> coluna chamada <b>"idade"</b> do tipo <b>inteiro (INT)</b>. Depois de executar este código, a tabela <b>"Clientes"</b> terá uma nova coluna chamada <b>"idade"</b>.
+
+Agora, se você quiser adicionar dados à nova coluna <b>"idade"</b> da tabela <b>"Clientes"</b>, pode usar o seguinte código SQL:
+<code>
+	UPDATE Clientes
+SET idade = 30
+WHERE id = 1;
+</code>
+Este código SQL usa o comando <b>"UPDATE"</b> para <b>alterar os dados</b> da tabela <b>"Clientes"</b>. O comando <b>"SET" define o valor</b> da coluna <b>"idade"</b> como 30. O comando <b>"WHERE" especifica</b> que apenas a linha com o valor de "id" igual a 1 <i>deve ser atualizada</i>. Após a execução deste código, a linha com o "id" 1 na tabela <b>"Clientes"</b> terá o valor <b>"idade"</b> definido como 30.
+
+Suponha que você não precise mais da tabela <b>"Clientes"</b> que criamos anteriormente e deseja <b>excluí-la</b> do seu banco de dados. Você pode usar o seguinte código DDL do SQL para <i>excluir a tabela</i>:
+<code>
+	DROP TABLE Clientes;
+</code>
+Este código usa o comando <b>"DROP TABLE"</b> para <b>excluir completamente</b> a tabela "Clientes" do seu banco de dados. Depois de executar este código, a tabela "Clientes" e todos os seus dados serão <b>permanentemente excluídos</b>.
+
+É <b>importante</b> notar que o comando <b>"DROP TABLE"</b> é <b>IRREVERSÍVEL</b> e <i>deve ser usado com cuidado</i>. Se você excluir uma tabela acidentalmente, <i>perderá todos os dados armazenados</i> nela e <b>não poderá recuperá-los</b>. Portanto, é recomendável sempre fazer um backup de seus dados antes de executar comandos DDL que possam afetar suas tabelas.
 
