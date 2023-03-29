@@ -5,10 +5,12 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#sistema-de-gerenciamento-de-banco-de-dados-sgbd">Sistema de Gerenciamento de Banco de Dados (SGBD)</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelagem-de-dados-para-banco-de-dados">Modelagem de Dados para Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#arquitetura-para-banco-de-dados">Arquitetura para Banco de Dados</a></li>
+	<br>
 	<a href="https://github.com/leostella97/conceitosbd#modelo-de-entidade-realcional-mer-com-banco-de-dados"><b>Modelo de Entidade Realcional (MER) com Banco de Dados</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#fundamentos-de-modelagem-e-projeto-de-banco-de-dados">Fundamentos de Modelagem e Projeto de Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelo-de-entidade-relacionamento-com-banco-de-dados">Modelo de Entidade Relacionamento com Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelo-de-relacionamento-de-entidade-aprimorado-com-banco-de-dados">Modelo de Relacionamento de Entidade Aprimorado com Banco de Dados</a></li>
+	<br>
 	<a href=""><b>Explorando a Linguagem de Consulta a Banco de Dados SQL</b></a>
 	<li><a href="">Modelo Relacional e Mapeamento Relacional com Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#primeiros-passos-com-sql">Primeiros Passos com SQL</a></li>
