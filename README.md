@@ -19,7 +19,9 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#order-by-cl%C3%A1usulas-de-ordena%C3%A7%C3%A3o-com-sql">ORDER BY: Cláusulas de ordenação com SQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#group-by-cl%C3%A1usulas-de-ordena%C3%A7%C3%A3o-com-sql">GROUP BY: Cláusulas de ordenação com SQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#having-statment">Having Statment</a></li>
-	<a href="">Agrupamendo Registros w Tabelas com Join Statment</a>
+	<a href="https://github.com/leostella97/conceitosbd#agrupamendo-registros-e-tabelas-com-join-statment">Agrupamendo Registros e Tabelas com Join Statment</a>
+	<li><a href="https://github.com/leostella97/conceitosbd#case-statment"></a>CASE Statment</li>
+	<li><a href="https://github.com/leostella97/conceitosbd#o-caso-zeronull-trick"></a>O Caso Zero/Null Trick</li>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
