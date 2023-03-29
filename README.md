@@ -34,3 +34,12 @@ Existem vários tipos de SGBDs disponíveis, incluindo <b>SGBDs relacionais, NoS
 Um SGBD geralmente inclui um <b>conjunto de ferramentas</b> para gerenciar o banco de dados, como ferramentas para <i>criar, modificar e excluir</i> tabelas e índices. Ele também fornece mecanismos para controlar o acesso ao banco de dados, <i>garantindo a segurança e a integridade</i> dos dados.
 
 Outras funções do SGBD incluem a execução de consultas complexas em grandes volumes de dados, gerenciamento de transações, controle de concorrência, backup e recuperação de dados e monitoramento de desempenho. A escolha do SGBD certo para uma determinada aplicação dependerá do tipo e volume de dados que precisam ser gerenciados, bem como das necessidades de segurança, escalabilidade e desempenho.
+
+## Modelagem de Dados para Banco de Dados
+No <b>contexto de banco de dados</b>, a <b>modelagem de dados</b> envolve a <i>criação de um modelo (podendo ser feito no <a href="draw.io">draw.io</a>) </i> que represente as informações que serão armazenadas no banco de dados. Esse modelo é <i>composto por entidades (tabelas), atributos (colunas) e relacionamentos entre as entidades</i>.
+
+O objetivo da modelagem de dados é <b>garantir</b> que o banco de dados seja <i>eficiente, seguro e fácil de usar</i>. Um bom modelo de dados deve <b>refletir com precisão</b> a estrutura dos dados, além de <b>atender</b> aos requisitos de negócios e às necessidades dos usuários finais.
+
+<i>Existem várias abordagens</i> para a modelagem de dados, como a abordagem <i>entidade-relacionamento (ER) e a abordagem orientada a objetos</i>. Cada uma dessas abordagens tem suas próprias técnicas e ferramentas de modelagem.
+
+A modelagem de dados é uma <b>etapa importante</b> no desenvolvimento de um sistema de banco de dados e deve ser realizada com cuidado para <i>garantir a eficácia e a eficiência</i> do sistema de informação como um todo.
