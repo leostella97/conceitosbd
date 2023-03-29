@@ -635,7 +635,7 @@ O CASE statement <i>também pode ser usado</i> com funções agregadas, como <i>
 
 Em resumo, o CASE statement é uma <b>cláusula condicional muito poderosa</b> em SQL, permitindo que expressões complexas sejam avaliadas e resultados condicionais sejam retornados. Ele é uma <b>ferramenta fundamental</b> em qualquer programação de banco de dados e pode ser usado de várias maneiras para <i>manipular dados de forma eficaz e eficiente</i>.
 
-### O Caso Zero/Null Trick
+## O Caso Zero/Null Trick
 O caso zero/null trick em SQL é uma técnica usada para <b>retornar valores diferentes</b> de zero em uma consulta SQL.
 
 Em muitos casos, as consultas SQL retornam zero <i>quando não há nenhum registro correspondente nas tabelas consultadas</i>. No entanto, em alguns casos, é necessário retornar um valor diferente de zero, como quando se deseja exibir <i>um valor padrão ou um valor calculado</i>.
