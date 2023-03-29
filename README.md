@@ -5,6 +5,8 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#sistema-de-gerenciamento-de-banco-de-dados-sgbd">Sistema de Gerenciamento de Banco de Dados (SGBD)</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelagem-de-dados-para-banco-de-dados">Modelagem de Dados para Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#arquitetura-para-banco-de-dados">Arquitetura para Banco de Dados
+	<a href="">Modelo de Entidade Realcional (MER) com Banco de Dados</a>
+	<li><a href="">Fundamentos de Modelagem e Projeto de Banco de Dados</a></li>
 </a></li>
 </ul>
 
