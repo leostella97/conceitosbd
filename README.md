@@ -321,5 +321,5 @@ SQL é uma <b>linguagem de consulta estruturada</b> usada para <i>gerenciar e ma
 
 <b>• Aprenda sobre relações:</b> Os bancos de dados relacionais são projetados para armazenar dados em tabelas relacionadas. Aprenda sobre relacionamentos de tabela e como criar consultas que unem várias tabelas. Um bom exemplo é o Modelo Entidade Relacionamento que vimos anteriormente.
 
-<img src="img/yoda-pratice.jpeg">
+<img src="img/yoda-pratice.jpg">
 
