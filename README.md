@@ -66,3 +66,12 @@ Uma arquitetura bem projetada pode <b>garantir</b> um <i>desempenho eficiente, s
 # Modelo de Entidade Realcional (MER) com Banco de Dados
 
 ## Fundamentos de Modelagem e Projeto de Banco de Dados
+A <b>modelagem e o projeto</b> de banco de dados são <b>fundamentais</b> para o <i>desenvolvimento de sistemas de informação</i> eficientes e confiáveis. Essas atividades envolvem a definição da estrutura dos dados que serão <i>armazenados, organizados e recuperados pelo sistema</i>.
+
+A <b>modelagem de dados</b> é o processo de criação de um modelo conceitual que <i>descreve os objetos, entidades e relacionamentos</i> que serão representados no banco de dados. Essa etapa é importante para <b>definir a semântica</b> dos dados e <b>garantir</b> que as informações sejam <b>armazenadas de forma coerente</b>.
+
+Já o <b>projeto de banco de dados</b> é a etapa em que o modelo conceitual é <i>transformado em um esquema lógico</i> que pode ser implementado em um <b>sistema de gerenciamento de banco de dados (SGDB)</b>. Nessa etapa, são definidos os <i>tipos de dados, as restrições de integridade e as estratégias de acesso e recuperação de dados</i>.
+
+Um bom projeto de banco de dados <b>deve ser baseado</b> em uma análise cuidadosa dos requisitos do sistema e das necessidades dos usuários. Além disso, deve levar em consideração aspectos como <i>desempenho, escalabilidade, segurança e manutenibilidade do sistema</i>.
+
+Por fim, é <b>importante</b> destacar que a modelagem e o projeto de banco de dados <i>são atividades contínuas e iterativas</i>. À medida que novos requisitos surgem ou que o sistema evolui, é necessário <b>atualizar e refinar</b> o modelo e o projeto para garantir a <i>eficiência e a confiabilidade do sistema</i>.
