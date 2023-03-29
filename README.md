@@ -19,3 +19,18 @@ Existem <b>vários tipos</b> de bancos de dados, cada um com suas próprias <i>c
 Os bancos de dados <b>são amplamente utilizados</b> em várias áreas, como <i>negócios, finanças, saúde, ciência e tecnologia</i>. Eles permitem que as empresas <b>armazenem e gerenciem</b> informações importantes, como dados do cliente, informações de vendas e estoque, além de ajudar no gerenciamento de recursos humanos e financeiros.
 
 Um banco de dados é uma <b>ferramenta essencial</b> para armazenar e gerenciar informações importantes de forma organizada e acessível, facilitando o gerenciamento e a tomada de decisões de uma empresa.
+
+## Sistema de Gerenciamento de Banco de Dados (SGBD)
+O <b>sistema de gerenciamento de banco de dados (SGBD)</b> é um software projetado para <b>gerenciar e organizar</b> bancos de dados. Ele fornece uma interface para que os usuários possam <i>inserir, atualizar e recuperar</i> informações do banco de dados de maneira eficiente.
+
+Existem vários tipos de SGBDs disponíveis, incluindo <b>SGBDs relacionais, NoSQL e orientados a objetos</b>;
+<br>
+<b>• SGBD relacional:</b> é o tipo mais comum e usa tabelas para armazenar dados relacionais;
+<br>
+<b>• NoSQL:</b>: por sua vez, é utilizado para <i>armazenar grandes quantidades</i> de dados não estruturados;
+<br>
+<b>• SGBD orientado a objetos:</b> é usado para armazenar objetos em vez de tabelas.
+
+Um SGBD geralmente inclui um <b>conjunto de ferramentas</b> para gerenciar o banco de dados, como ferramentas para <i>criar, modificar e excluir</i> tabelas e índices. Ele também fornece mecanismos para controlar o acesso ao banco de dados, <i>garantindo a segurança e a integridade</i> dos dados.
+
+Outras funções do SGBD incluem a execução de consultas complexas em grandes volumes de dados, gerenciamento de transações, controle de concorrência, backup e recuperação de dados e monitoramento de desempenho. A escolha do SGBD certo para uma determinada aplicação dependerá do tipo e volume de dados que precisam ser gerenciados, bem como das necessidades de segurança, escalabilidade e desempenho.
