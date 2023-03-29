@@ -5,21 +5,20 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#sistema-de-gerenciamento-de-banco-de-dados-sgbd">Sistema de Gerenciamento de Banco de Dados (SGBD)</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelagem-de-dados-para-banco-de-dados">Modelagem de Dados para Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#arquitetura-para-banco-de-dados">Arquitetura para Banco de Dados</a></li>
-	<br>
 	<a href="https://github.com/leostella97/conceitosbd#modelo-de-entidade-realcional-mer-com-banco-de-dados"><b>Modelo de Entidade Realcional (MER) com Banco de Dados</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#fundamentos-de-modelagem-e-projeto-de-banco-de-dados">Fundamentos de Modelagem e Projeto de Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelo-de-entidade-relacionamento-com-banco-de-dados">Modelo de Entidade Relacionamento com Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelo-de-relacionamento-de-entidade-aprimorado-com-banco-de-dados">Modelo de Relacionamento de Entidade Aprimorado com Banco de Dados</a></li>
-	<br>
 	<a href=""><b>Explorando a Linguagem de Consulta a Banco de Dados SQL</b></a>
 	<li><a href="">Modelo Relacional e Mapeamento Relacional com Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#primeiros-passos-com-sql">Primeiros Passos com SQL</a></li>
-	<br>
 	<a href="https://github.com/leostella97/conceitosbd#explorando-queries-com-sql"><b>Explorando Queries com SQL</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#comandos-baseados-em-opera%C3%A7%C3%B5es-matem%C3%A1ticas-union-intersection-e-except">Comandos Baseados em Operações Matemáticas: UNION, INTERSECTION e EXCEPT</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#elaborando-queries-sql-com-express%C3%B5es">Elaborando Queries SQL com Expressões</a></li>
-	<br>
-	<a href="">Criando Queries com Funções e Cláusulas de Agrupamentos</a>
+	<a href="https://github.com/leostella97/conceitosbd#criando-queries-com-fun%C3%A7%C3%B5es-e-cl%C3%A1usulas-de-agrupamentos"><b>Criando Queries com Funções e Cláusulas de Agrupamentos</b></a>
+	<li><a href="https://github.com/leostella97/conceitosbd#order-by-cl%C3%A1usulas-de-ordena%C3%A7%C3%A3o-com-sql">ORDER BY: Cláusulas de ordenação com SQL</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#group-by-cl%C3%A1usulas-de-ordena%C3%A7%C3%A3o-com-sql">GROUP BY: Cláusulas de ordenação com SQL</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#having-statment">Having Statment</a></li>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
