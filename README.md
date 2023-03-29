@@ -8,7 +8,7 @@
 	<a href="https://github.com/leostella97/conceitosbd#modelo-de-entidade-realcional-mer-com-banco-de-dados"><b>Modelo de Entidade Realcional (MER) com Banco de Dados</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#fundamentos-de-modelagem-e-projeto-de-banco-de-dados">Fundamentos de Modelagem e Projeto de Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelo-de-entidade-relacionamento-com-banco-de-dados">Modelo de Entidade Relacionamento com Banco de Dados</a></li>
-	<li><a href="">Modelo de Relacionamento de Entidade Aprimorado com Banco de Dados</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#modelo-de-relacionamento-de-entidade-aprimorado-com-banco-de-dados">Modelo de Relacionamento de Entidade Aprimorado com Banco de Dados</a></li>
 </a></li>
 </ul>
 
