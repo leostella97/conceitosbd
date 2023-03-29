@@ -7,6 +7,7 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#arquitetura-para-banco-de-dados">Arquitetura para Banco de Dados</a></li>
 	<a href="https://github.com/leostella97/conceitosbd#modelo-de-entidade-realcional-mer-com-banco-de-dados"><b>Modelo de Entidade Realcional (MER) com Banco de Dados</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#fundamentos-de-modelagem-e-projeto-de-banco-de-dados">Fundamentos de Modelagem e Projeto de Banco de Dados</a></li>
+	<li><a href="">Modelo de Entidade Relacionamento com Banco de Dados</a></li>
 </a></li>
 </ul>
 
@@ -77,3 +78,71 @@ Já o <b>projeto de banco de dados</b> é a etapa em que o modelo conceitual é 
 Um bom projeto de banco de dados <b>deve ser baseado</b> em uma análise cuidadosa dos requisitos do sistema e das necessidades dos usuários. Além disso, deve levar em consideração aspectos como <i>desempenho, escalabilidade, segurança e manutenibilidade do sistema</i>.
 
 Por fim, é <b>importante</b> destacar que a modelagem e o projeto de banco de dados <i>são atividades contínuas e iterativas</i>. À medida que novos requisitos surgem ou que o sistema evolui, é necessário <b>atualizar e refinar</b> o modelo e o projeto para garantir a <i>eficiência e a confiabilidade do sistema</i>.
+
+### Características de um Banco de Dados
+Um banco de dados é um <b>conjunto organizado</b> de dados que são <i>armazenados e gerenciados</i> em um sistema computacional. Algumas <b>características</b> de um banco de dados são:
+
+<b>• Estrutura organizada:</b> os dados são organizados de uma forma estruturada, geralmente em tabelas, para facilitar a <i>busca, classificação e acesso às informações</i>.
+
+<b>• Relacionamentos:</b> os dados podem estar relacionados entre si, permitindo a realização de consultas complexas que envolvem múltiplas tabelas.
+
+<b>• Confiabilidade:</b> os bancos de dados são projetados para serem <b>confiáveis e duráveis</b>, protegendo os dados contra perda ou corrupção.
+
+<b>• Controle de acesso:</b> os bancos de dados oferecem mecanismos de controle de acesso que permitem determinar quais usuários têm acesso a quais dados.
+
+<b>• Consistência:</b> os bancos de dados são projetados para <b>manter a consistência</b> dos dados, mesmo que ocorram falhas no sistema.
+
+<b>Escalabilidade:</b> os bancos de dados são projetados para suportar grandes quantidades de dados e muitos usuários simultaneamente, <b>permitindo que sejam escaláveis</b> conforme as necessidades da aplicação.
+
+### Mundo Fechado e mini-Mundo
+"Mundo fechado" geralmente se refere a um <i>sistema ou ambiente</i> em que tem <b>pouca interação ou comunicação</b> com o mundo exterior. No Banco de Dados, <b>se refere</b> a uma representação simplificada de um ambiente do mundo real em um banco de dados.
+
+Um exemplo de "mundo fechado" pode ser uma <i>prisão de segurança máxima</i>, em que os presos têm <b>pouca ou nenhuma</b> interação com o mundo exterior. Já um exemplo de "mini mundo do banco de dados" pode ser um <i>sistema de gerenciamento de biblioteca</i>, em que informações como títulos de livros, autores e empréstimos <b>são armazenadas e gerenciadas</b> em um banco de dados.
+
+### Álgebra Relacional e Projeto de Banco de Dados
+A "álgebra relacional do banco de dados" é um <b>conjunto de operações</b> que permitem <b>manipular dados armazenados</b> em um banco de dados relacional. Essas operações incluem <i>seleção, projeção, união, interseção, diferença e junção, entre outras (muito semelhante a matemática)</i>. A <b>álgebra relacional</b> é uma linguagem formal usada para <b>especificar consultas</b> em bancos de dados relacionais.
+
+Já o "projeto de banco de dados" é o processo de <b>projetar a estrutura</b> de um banco de dados, incluindo as <i>tabelas, relacionamentos e restrições</i>. O projeto de banco de dados envolve a <i>identificação dos requisitos de informação e a organização</i> desses requisitos em uma <b>estrutura lógica</b> que possa ser implementada em um sistema de gerenciamento de banco de dados. Um projeto de banco de dados bem feito é <b>fundamental</b> para garantir a <b>integridade e a consistência</b> dos dados armazenados.
+
+### Modelagem
+Modelagem é o <b>processo de criação</b> de um modelo abstrato de um sistema ou processo real. A modelagem pode ser usada em diversas áreas, como <i>engenharia, ciência, negócios e computação</i>, e tem como objetivo <b>simplificar a compreensão</b> do sistema ou processo em questão.
+
+Na computação, a modelagem pode ser usada para <i>criar modelos de dados, processos de negócios, interfaces de usuário e sistemas de software</i>. Esses modelos ajudam a <b>visualizar e entender</b> como o sistema ou processo funciona, permitindo a <i>identificação de problemas, a análise de desempenho e a implementação de melhorias</i>.
+
+A modelagem geralmente envolve o <i>uso de diagramas, gráficos ou outras representações visuais</i> para mostrar as relações entre diferentes partes do sistema ou processo. Esses modelos podem ser usados para comunicar <b>ideias e conceitos complexos</b> de forma clara e concisa.
+
+## Modelo de Entidade Relacionamento com Banco de Dados
+Em um<b> Modelo de Entidade-Relacionamento (ER)</b>, as entidades representam <b>objetos ou conceitos</b> do mundo real que possuem <b>atributos e relacionamentos</b> com outras entidades. O modelo ER é comumente usado na modelagem de banco de dados para <i>ajudar a organizar e entender a estrutura dos dados</i>.
+
+Em um <b>modelo ER</b>, as <i>entidades são representadas por retângulos e os atributos são representados por elipses conectadas a esses retângulos</i>. Os relacionamentos entre as <i>entidades são representados por linhas conectando as entidades, com um rótulo na linha que descreve a natureza do relacionamento</i>. Além disso, os diagramas ER podem incluir símbolos adicionais para <b>representar restrições e cardinalidade</b> de relacionamentos.
+
+No processo de modelagem de um banco de dados, um diagrama ER <i>pode ajudar a visualizar</i> a estrutura geral dos dados e a <i>identificar problemas ou inconsistências</i> potenciais na estrutura. Com base no diagrama ER, é possível <b>criar um esquema</b> de banco de dados que reflita a estrutura do modelo e forneça uma <i>base para o armazenamento e manipulação de dados</i>.
+
+### Modelo ER: tipos de Entidade, Chaves e Atributos
+Um <b>Modelo ER (Entidade-Relacionamento)</b> é uma ferramenta usada para <i>modelar e representar</i> um banco de dados. Existem <b>três componentes principais</b> em um Modelo ER: <i>entidades, chaves e atributos</i>.
+
+<b>Entidades</b> são <i>objetos ou conceitos</i> do mundo real que podem ser <i>identificados e representados</i> no banco de dados. Por exemplo, em um banco de dados de uma empresa, as entidades podem ser <i>clientes, produtos e pedidos</i>.
+
+As <b>chaves</b> são usadas para <i>identificar exclusivamente</i> cada instância de uma entidade. Por exemplo, para uma <i>entidade de cliente</i>, o número do CPF <i>pode ser usado como chave</i>.
+
+<b>Atributos</b> são <i>características das entidades</i> que são armazenadas no banco de dados. Eles <b>descrevem</b> as propriedades de uma entidade. Por exemplo, para uma entidade de produto, os atributos podem ser o nome do <i>produto, preço e descrição</i>.
+
+Ao criar um modelo ER, é <b>importante identificar</b> todas as <i>entidades relevantes</i> e seus <i>atributos</i>, bem como as chaves que serão usadas para identificá-las exclusivamente. Isso ajudará a garantir a integridade dos dados e facilitar a recuperação de informações no banco de dados.
+
+### Relacionamentos, Papéis e Constraints estruturais
+<b>Relacionamentos</b> referem-se às <i>conexões ou ligações</i> entre <i>entidades ou elementos de um sistema</i>. Esses relacionamentos podem ser de diferentes tipos, como <i>um-para-um (1:1), um-para-muitos (1:n) ou muitos-para-muitos (n:n)</i>.
+
+<b>Papéis</b> são as <i>funções ou responsabilidades</i> atribuídas a uma entidade em um sistema. Por exemplo, em um sistema de gerenciamento de clientes, um cliente pode desempenhar o papel de <i>comprador ou vendedor</i>.
+
+<b>Constraints estruturais</b> são <i>restrições que limitam</i> as possibilidades de configuração ou operação de um sistema. Essas restrições podem ser físicas, como o tamanho de um objeto ou a capacidade de uma máquina, ou lógicas, como a exigência de que uma determinada operação seja realizada antes de outra.
+
+No contexto do <b>design de sistemas</b>, é importante considerar cuidadosamente os <i>relacionamentos, papéis e constraints estruturais</i> para garantir que o sistema seja <i>funcional, eficiente e seguro</i>.
+
+### Alternativa UML (Unified Modeling Language)
+A <b>UML (Unified Modeling Language)</b> é uma linguagem de modelagem padrão que pode ser usada para <i>projetar sistemas, incluindo bancos de dados</i>.
+
+A UML pode ser usada para <i>modelar diferentes aspectos</i> de um banco de dados, como suas <i>entidades, relacionamentos, atributos e restrições</i>. Algumas das principais ferramentas UML que podem ser usadas para modelagem de bancos de dados incluem <i>diagramas de classes, diagramas de entidade-relacionamento (ER), diagramas de sequência e diagramas de atividades</i>.
+
+O <b>diagrama de classe da UML</b> pode ser usado para modelar as classes de <i>objetos do banco de dados, seus atributos e métodos</i>. O diagrama de ER pode ser usado para <i>modelar as entidades e seus relacionamentos</i>, incluindo a <i>cardinalidade e a participação</i>. O <b>diagrama de sequência</b> pode ser usado para modelar como as diferentes entidades interagem e trocam informações, e o diagrama de atividade pode ser usado para modelar o fluxo de trabalho de um processo de banco de dados.
+
+Ao <b>modelar</b> um banco de dados usando a UML, é <b>importante considerar</b> os requisitos do sistema, as restrições de integridade e as boas práticas de design de banco de dados. Uma modelagem bem-feita pode facilitar a criação de um banco de dados <i>eficiente, escalável e de fácil manutenção</i>.
