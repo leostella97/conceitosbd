@@ -43,3 +43,14 @@ O objetivo da modelagem de dados é <b>garantir</b> que o banco de dados seja <i
 <i>Existem várias abordagens</i> para a modelagem de dados, como a abordagem <i>entidade-relacionamento (ER) e a abordagem orientada a objetos</i>. Cada uma dessas abordagens tem suas próprias técnicas e ferramentas de modelagem.
 
 A modelagem de dados é uma <b>etapa importante</b> no desenvolvimento de um sistema de banco de dados e deve ser realizada com cuidado para <i>garantir a eficácia e a eficiência</i> do sistema de informação como um todo.
+
+## Arquitetura para Banco de Dados
+A arquitetura de um banco de dados refere-se à <b>estrutura e organização</b> dos componentes que permitem o <i>armazenamento, gerenciamento e recuperação de informações</i>. A arquitetura pode ser dividida em três camadas principais: <i>a camada física, a camada lógica e a camada de visão</i>.
+
+A camada física <b>refere-se aos dispositivos físicos de armazenamento</b>, como discos rígidos, fitas magnéticas, unidades de estado sólido (SSDs) e outras tecnologias de armazenamento. Esses dispositivos são responsáveis por <i>armazenar os dados do banco de dados</i>.
+
+A camada lógica inclui o software que <b>gerencia o acesso e a manipulação</b> dos dados armazenados na camada física. Isso inclui o <i>sistema de gerenciamento de banco de dados (SGBD)</i>, que fornece uma interface para que os usuários possam <i>interagir com os dados</i>. A camada lógica também inclui a linguagem de consulta estruturada (SQL) usada para <b>acessar e manipular</b> os dados.
+
+A camada de visão <b>refere-se à interface</b> que permite que os usuários visualizem e interajam com os dados. Isso inclui aplicativos de software, páginas da web e outros meios pelos quais os usuários <i>podem acessar o banco de dados (por exemplo o PHPMyAdmin e o MySQL Workbench)</i>.
+
+Uma arquitetura bem projetada pode <b>garantir</b> um <i>desempenho eficiente, segurança, integridade e disponibilidade</i> dos dados em um banco de dados.
