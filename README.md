@@ -1,7 +1,6 @@
 # Conceitos de Banco de Dados
 
-<ul>
-	<li><a href="https://github.com/leostella97/conceitosbd#introdu%C3%A7%C3%A3o-ao-banco-de-dados"><b>Introdução</a></li>
+<ul><a href="https://github.com/leostella97/conceitosbd#introdu%C3%A7%C3%A3o-ao-banco-de-dados"><b>Introdução</a>
 	<li><a href="https://github.com/leostella97/conceitosbd#sistema-de-gerenciamento-de-banco-de-dados-sgbd">Sistema de Gerenciamento de Banco de Dados (SGBD)</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#modelagem-de-dados-para-banco-de-dados">Modelagem de Dados para Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#arquitetura-para-banco-de-dados">Arquitetura para Banco de Dados
