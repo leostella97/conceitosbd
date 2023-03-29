@@ -12,6 +12,9 @@
 	<a href="">Explorando a Linguagem de Consulta a Banco de Dados SQL</a>
 	<li><a href="">Modelo Relacional e Mapeamento Relacional com Banco de Dados</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#primeiros-passos-com-sql">Primeiros Passos com SQL</a></li>
+	<a href="https://github.com/leostella97/conceitosbd#explorando-queries-com-sql">Explorando Queries com SQL</a>
+	<li><a href="https://github.com/leostella97/conceitosbd#comandos-baseados-em-opera%C3%A7%C3%B5es-matem%C3%A1ticas-union-intersection-e-except">Comandos Baseados em Operações Matemáticas: UNION, INTERSECTION e EXCEPT</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#elaborando-queries-sql-com-express%C3%B5es">Elaborando Queries SQL com Expressões</a></li>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
