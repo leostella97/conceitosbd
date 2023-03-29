@@ -375,3 +375,103 @@ Este código usa o comando <b>"DROP TABLE"</b> para <b>excluir completamente</b>
 
 É <b>importante</b> notar que o comando <b>"DROP TABLE"</b> é <b>IRREVERSÍVEL</b> e <i>deve ser usado com cuidado</i>. Se você excluir uma tabela acidentalmente, <i>perderá todos os dados armazenados</i> nela e <b>não poderá recuperá-los</b>. Portanto, é recomendável sempre fazer um backup de seus dados antes de executar comandos DDL que possam afetar suas tabelas.
 
+## Explorando Queries com SQL
+Explorar queries com SQL é uma <b>habilidade essencial</b> para trabalhar com bancos de dados. Aqui estão algumas etapas para começar:
+
+<b>• Entenda sua estrutura de dados:</b> Antes de começar a escrever consultas, é importante que você <i>entenda a estrutura</i> do banco de dados, incluindo as <i>tabelas, colunas e relacionamentos</i>.
+
+<b>• Escreva consultas simples:</b> Comece escrevendo consultas simples para <b>selecionar dados</b> de uma tabela específica. Use a cláusula <b>SELECT</b> para <b>selecionar as colunas</b> que você precisa e a cláusula <b>FROM</b> para <b>especificar a tabela</b>.
+
+<b>• Use a cláusula WHERE para filtrar resultados:</b> Para <i>refinar seus resultados</i>, use a cláusula <b>WHERE</b> para filtrar com <i>base em condições específicas.</i>
+
+<b>• Combine múltiplas tabelas com JOIN:</b> Se você <b>precisar combinar</b> dados de várias tabelas, use a cláusula <b>JOIN</b> para <b>unir</b> as tabelas.
+
+<b>• Agrupe e resuma dados com GROUP BY e funções agregadas:</b> Se você precisar <b>agrupar dados</b> por uma ou mais colunas e <b>realizar cálculos</b> resumidos, como <i>somas ou contagens</i>, use a cláusula <b>GROUP BY</b> e funções agregadas como <b>SUM e COUNT</b>.
+
+<b>• Ordene resultados com ORDER BY:</b> Para <b>ordenar</b> seus resultados por <i>uma ou mais</i> colunas, use a cláusula <b>ORDER BY</b>.
+
+<b>• Use subconsultas para consultas complexas:</b> Se você precisar de consultas mais complexas, use <b>subconsultas</b> para criar consultas dentro de consultas.
+
+<b>Experimente e refine suas consultas:</b> Experimente diferentes consultas para ver <b>quais retornam</b> os resultados desejados e <b>refine suas consultas</b> para torná-las mais eficientes.
+
+Com <b>prática e experiência</b>, você pode se tornar um expert em escrever consultas SQL e <b>obter insights</b> valiosos de seus dados.
+
+### Comandos Baseados em Operações Matemáticas: UNION, INTERSECTION e EXCEPT
+Esses comandos são usados para <b>combinar resultados</b> de consultas diferentes ou para <b>obter um conjunto</b> de resultados que satisfazem uma condição específica.
+
+<b>• UNION:</b>
+O comando UNION é usado para <b>combinar os resultados</b> de duas ou mais consultas <b>SELECT</b> em um único conjunto de resultados. Ele remove quaisquer duplicatas do conjunto de resultados final. A <b>sintaxe</b> do comando UNION é a seguinte:
+<code>
+	SELECT coluna1, coluna2 FROM tabela1
+UNION
+SELECT coluna1, coluna2 FROM tabela2;
+</code>
+Aqui, duas consultas SELECT são combinadas usando o comando UNION.
+<b>• INTERSECT:</b>
+O comando <b>INTERSECT</b> é usado para <b>retornar os resultados</b> comuns de duas ou mais consultas <b>SELECT</b>. Ele retorna apenas as linhas que aparecem em todos os conjuntos de resultados. A <b>sintaxe</b> do comando INTERSECT é a seguinte:
+<code>
+	SELECT coluna1, coluna2 FROM tabela1
+INTERSECT
+SELECT coluna1, coluna2 FROM tabela2;
+</code>
+Aqui, duas consultas <b>SELECT</b> são combinadas usando o comando <b>INTERSECT</b>.
+<b>• EXCEPT:</b>
+O comando <b>EXCEPT</b> é usado para <b>retornar as linhas</b> que aparecem na <b>primeira consulta</b> SELECT, mas <b>não na segunda</b> consulta SELECT. Ele <i>retorna todas as linhas</i> da primeira consulta SELECT que não aparecem na segunda consulta SELECT. A <b>sintaxe</b> do comando EXCEPT é a seguinte:
+<code>
+	SELECT coluna1, coluna2 FROM tabela1
+EXCEPT
+SELECT coluna1, coluna2 FROM tabela2;
+</code>
+Aqui, duas consultas <b>SELECT</b> são combinadas usando o comando <b>EXCEPT</b>.
+
+Continuando...
+<b>• MOD (%):</b>
+O operador <b>MOD</b> é usado para <b>retornar o resto</b> de uma divisão. Por exemplo, se você quiser <i>encontrar todos os registros</i> em uma tabela cujo id seja ímpar, você pode usar o operador MOD da seguinte forma:
+<code>
+	SELECT * FROM tabela WHERE id % 2 = 1;
+</code>
+Este comando retornará todos os registros em que o valor da coluna "id" é ímpar.
+
+<b>• EXISTS:</b>
+O operador <b>EXISTS</b> é usado para <b>verificar se uma subconsulta</b> retorna algum resultado. Por exemplo, se você quiser verificar se há algum registro na tabela <b>"pedidos"</b> para um determinado cliente, você pode usar o operador <b>EXISTS</b> da seguinte forma:
+<code>
+	SELECT * FROM clientes WHERE EXISTS(SELECT * FROM pedidos WHERE clientes.id = pedidos.id_cliente);
+</code>
+Este comando <b>retornará todos</b> os clientes que têm <i>pelo menos um</i> registro na tabela <b>"pedidos"</b>.
+
+Esses comandos podem ser muito <b>úteis para realizar</b> operações mais avançadas em seu banco de dados e <b>obter resultados</b> mais <i>precisos e específicos</i>.
+
+### Elaborando Queries SQL com Expressões
+• Consulta que <b>retorna o número</b> de vendas feitas por cada vendedor em <b>ordem decrescente</b>:
+<code>
+	SELECT vendedor, COUNT(*) as num_vendas 
+	FROM tabela_vendas 
+	GROUP BY vendedor 
+	ORDER BY num_vendas DESC;
+</code>
+• Consulta que <b>retorna os produtos</b> que tiveram uma quantidade de vendas <b>superior a 1000</b> unidades:
+<code>
+	SELECT produto 
+	FROM tabela_vendas 
+	WHERE quantidade_vendida > 1000;
+</code>
+• Consulta que retorna a média de preço dos produtos vendidos:
+<code>
+	SELECT AVG(preco) as media_precos 
+	FROM tabela_vendas;
+</code>
+• Consulta que retorna os vendedores que realizaram vendas acima da média:
+<code>
+	SELECT vendedor 
+	FROM tabela_vendas 
+	GROUP BY vendedor 
+	HAVING AVG(valor_venda) > (SELECT AVG(valor_venda) FROM tabela_vendas);
+</code>
+• Consulta que retorna o número de vendas realizadas em cada mês do ano atual:
+<code>
+	SELECT MONTH(data_venda) as mes, COUNT(*) as num_vendas 
+	FROM tabela_vendas 
+	WHERE YEAR(data_venda) = YEAR(CURRENT_DATE()) 
+	GROUP BY mes;
+</code>
+
