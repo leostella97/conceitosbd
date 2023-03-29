@@ -22,6 +22,7 @@
 	<a href="https://github.com/leostella97/conceitosbd#agrupamendo-registros-e-tabelas-com-join-statment">Agrupamendo Registros e Tabelas com Join Statment</a>
 	<li><a href="https://github.com/leostella97/conceitosbd#case-statment"></a>CASE Statment</li>
 	<li><a href="https://github.com/leostella97/conceitosbd#o-caso-zeronull-trick"></a>O Caso Zero/Null Trick</li>
+	<a href="">Personalizando Acessos com Views</a>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
@@ -648,3 +649,106 @@ Por exemplo, se quisermos retornar o número total de vendas de um determinado p
 </code>
 
 Nesse caso, a subconsulta retorna nulo <b>se não houver nenhum</b> registro correspondente na tabela de produtos, e a função <b>COALESCE</b> substitui esse valor nulo pelo valor <b>"N/A"</b>. <i>Se houver registros correspondentes</i>, a soma das vendas será exibida normalmente.
+
+## Personalizando Acessos com Views
+<b>Views são consultas</b> SQL armazenadas que <i>permitem personalizar o acesso aos dados em um banco de dados</i>. Elas podem ser usadas para <b>restringir o acesso</b> a determinadas colunas ou linhas de dados, <b>limitar a exposição</b> de informações sensíveis ou <b>simplificar consultas</b> complexas.
+
+Ao criar uma view, você está criando uma <b>"tabela virtual"</b> que contém os <i>resultados de uma consulta</i>. Você pode definir restrições de acesso para que <b>apenas determinados</b> usuários possam <i>visualizar a view ou apenas permitir</i> que determinados usuários possam executar certas operações na view, como selecionar ou atualizar dados.
+
+Além disso, views também podem ser usadas para <b>simplificar o acesso</b> a dados complexos. Por exemplo, você pode criar uma view que <i>combine várias tabelas</i> em uma única tabela virtual, <b>facilitando</b> a consulta de informações de várias fontes de dados.
+
+Views são uma <b>ferramenta poderosa</b> para personalizar o acesso aos dados em um banco de dados, tornando-o <i>mais seguro, mais simples e mais eficiente</i>.
+
+### Personalizando Acessos com Views no MySQL
+Para personalizar um acesso com view no MySQL, pode fazer da seguinte maneira:
+
+<b>• Criar a view:</b> Utilize o comando <b>"CREATE VIEW"</b> para <i>criar a view com os campos</i> que deseja visualizar.
+Exemplo:
+<code>
+CREATE VIEW minha_view AS SELECT coluna1, coluna2 FROM minha_tabela;
+</code>
+
+<b>• Conceder acesso à view:</b> Utilize o comando <b>"GRANT SELECT"</b> para <i>conceder acesso à view para um usuário específico</i>.
+Exemplo:
+<code>
+GRANT SELECT ON minha_view TO meu_usuario;
+</code>
+
+<b>• Revogar acesso à view:</b> Utilize o comando <b>"REVOKE SELECT"</b> para <b>revogar o acesso</b> à view para um usuário específico.
+Exemplo:
+<code>
+REVOKE SELECT ON minha_view FROM meu_usuario;
+</code>
+
+Com esses passos, você pode <b>personalizar o acesso</b> à view no MySQL de acordo com as necessidades do seu projeto.
+
+### Explorando exemplos de criação de views
+Uma view é uma <b>tabela virtual</b> que é criada a partir de uma <i>consulta SQL e que pode ser usada como uma tabela real</i>. Ela pode ser usada para <b>simplificar consultas</b> complexas ou para fornecer uma visão mais restrita dos dados para determinados usuários.
+
+Para <b>criar uma view</b>, é necessário usar a <b>sintaxe SQL CREATE VIEW</b>. Aqui está um exemplo:
+<code>
+CREATE VIEW clientes_ativos AS
+SELECT *
+FROM clientes
+WHERE status = 'ativo';
+</code>
+
+Neste exemplo, criamos uma view chamada <b>"clientes_ativos"</b> que contém todos os clientes que têm status <b>"ativo"</b>.
+
+Uma vez criada a view, podemos <b>usá-la em consultas</b> como se fosse uma tabela real. Por exemplo:
+<code>
+SELECT *
+FROM pedidos
+INNER JOIN clientes_ativos ON pedidos.cliente_id = clientes_ativos.id;
+</code>
+
+Neste exemplo, estamos selecionando todos os pedidos que foram feitos por clientes ativos, usando a view <b>"clientes_ativos"</b> para restringir a lista de clientes.
+
+Outro exemplo de uso de views é para simplificar consultas complexas. 
+Segue um exemplo:
+<code>
+CREATE VIEW vendas_por_mes AS
+SELECT
+  YEAR(data) AS ano,
+  MONTH(data) AS mes,
+  SUM(total) AS total_vendido
+FROM pedidos
+GROUP BY YEAR(data), MONTH(data);
+</code>
+
+Neste exemplo, criamos uma view chamada <b>"vendas_por_mes"</b> que calcula o <i>total vendido por mês em cada ano</i>. Isso pode ser útil para análises de vendas ou para gerar gráficos.
+
+As views podem ser úteis para <i>simplificar consultas complexas, fornecer uma visão mais restrita dos dados para determinados usuários e até mesmo para gerar relatórios e gráficos</i>.
+
+## Explorando Cláusulas de DDL e Esquemas de Banco de Dados no MySQL
+Como dito anteriormente, <b>DDL</b> significa <b>"Data Definition Language"</b> e é usado para <i>criar, alterar e excluir objetos</i> de banco de dados, como <i>tabelas, índices e visões</i>. Aqui estão algumas das <i>cláusulas DDL mais comuns</i> no MySQL:
+
+<b>• CREATE:</b> <i>cria um novo</i> objeto de banco de dados, como uma tabela, índice ou visão.
+<b>• ALTER:</b> <i>modifica a estrutura</i> de um objeto de banco de dados existente, como <i>adicionar ou excluir uma coluna</i> em uma tabela.
+<b>• DROP:</b> <i>exclui um objeto</i> de banco de dados existente, como uma tabela ou índice.
+
+Os esquemas de banco de dados no MySQL são uma <b>coleção lógica</b> de objetos de banco de dados, como tables e views. Eles são usados para <i>organizar e gerenciar</i> objetos de banco de dados relacionados. Um esquema é criado usando a cláusula DDL <b>"CREATE SCHEMA"</b>(SCHEMA e DATABASE são os mesmos). Por exemplo:
+<code>
+CREATE SCHEMA meu_banco_de_dados;
+</code>
+
+Uma vez criado o esquema, podemos criar tabelas e outros objetos de banco de dados dentro dele. Aqui está um exemplo de criação de uma tabela dentro do esquema "meu_banco_de_dados":
+<code>
+CREATE TABLE meu_banco_de_dados.clientes (
+  id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id)
+);
+</code>
+
+Neste exemplo, criamos uma tabela chamada <b>"clientes"</b> dentro do schema <b>"meu_banco_de_dados"</b>. A tabela contém três colunas: <b>"id", "nome" e "email"</b>. A cláusula <b>"PRIMARY KEY"</b> define a coluna <b>"id"</b> como <b>chave primária</b> da tabela.
+
+Podemos usar a cláusula <b>"USE"</b> para selecionar o schema que queremos usar em uma consulta:
+<code>
+USE meu_banco_de_dados;
+</code>
+
+Isso irá <i>selecionar o esquema</i> <b>"meu_banco_de_dados"</b> para uso em <i>consultas subsequentes</i>.
+
+As cláusulas DDL e os esquemas de banco de dados <b>são importantes</b> para <b>criar e gerenciar</b> objetos de banco de dados no MySQL. Eles nos permitem <b>organizar e controlar</b> melhor os dados em nossos <b>aplicativos e sistemas</b>.
