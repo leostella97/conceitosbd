@@ -19,6 +19,7 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#order-by-cl%C3%A1usulas-de-ordena%C3%A7%C3%A3o-com-sql">ORDER BY: Cláusulas de ordenação com SQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#group-by-cl%C3%A1usulas-de-ordena%C3%A7%C3%A3o-com-sql">GROUP BY: Cláusulas de ordenação com SQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#having-statment">Having Statment</a></li>
+	<a href="">Agrupamendo Registros w Tabelas com Join Statment</a>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
@@ -564,3 +565,84 @@ HAVING condição;
 A condição especificada na cláusula "HAVING" pode <i>incluir funções de agregação, como SUM, COUNT, AVG, MAX, MIN, entre outras</i>. Além disso, a condição pode incluir <i>operadores lógicos, como AND, OR e NOT</i>.
 
 Em resumo, a cláusula "HAVING" é uma <b>ferramenta útil</b> para filtrar grupos de resultados em consultas SQL e <i>deve ser usada após a cláusula</i> "GROUP BY".
+
+## Agrupamendo Registros e Tabelas com Join Statment
+O Agrupamento de Registros e Tabelas com o Join Statement é uma técnica utilizada em bancos de dados relacionais para <b>combinar dados</b> de duas ou mais tabelas <b>em uma única consulta</b>.
+
+O <b>Join Statement</b> permite que o usuário especifique como as tabelas estão relacionadas entre si, com base em uma ou mais colunas comuns. Essa relação é usada para <b>combinar</b> as linhas das tabelas que possuem valores correspondentes nessas colunas.
+
+Além disso, o <b>Join Statement</b> também permite <b>agrupar os registros</b> resultantes da combinação de tabelas em um único conjunto, com <i>base em uma ou mais colunas selecionadas</i>. Isso é feito por meio do uso da cláusula <b>"GROUP BY"</b>, que especifica <i>quais colunas devem ser usadas para agrupar os resultados</i>.
+
+Existem <b>diferentes tipos de joins</b>, cada um com um <b>comportamento específico</b>. Os mais comuns são:
+
+<b>• Inner Join:</b> retorna apenas as linhas das tabelas que possuem valores correspondentes nas colunas especificadas;
+<br>
+<b>• Left Join:</b> retorna todas as linhas da tabela da esquerda e as linhas correspondentes da tabela da direita (ou NULL, se não houver correspondência);
+<br>
+<b>• Right Join:</b> retorna todas as linhas da tabela da direita e as linhas correspondentes da tabela da esquerda (ou NULL, se não houver correspondência);
+<br>
+<b>• Full Outer Join:</b> retorna todas as linhas de ambas as tabelas, incluindo aquelas que não têm correspondência em nenhuma das tabelas.
+
+O <b>agrupamento de registros e tabelas</b> com o Join Statement é uma técnica <b>poderosa e versátil</b> que permite que os usuários obtenham informações mais completas e precisas de seus bancos de dados. No entanto, é importante lembrar que um <i>uso inadequado do Join Statement pode afetar negativamente o desempenho do banco de dados e resultar em consultas lentas ou falhas</i>. Por isso, é <i>recomendável ter conhecimento e prática</i> em SQL antes de usá-lo em um ambiente de produção.
+
+### CASE Statment
+O CASE statement em SQL é uma <b>cláusula condicional</b> que permite <i>avaliar uma expressão e retornar um resultado baseado em uma ou mais condições</i>. Ele pode ser usado em <b>SELECT, WHERE, HAVING e ORDER BY</b> cláusulas para realizar uma <b>lógica condicional</b>.
+
+A <b>sintaxe básica</b> do CASE statement é a seguinte:
+<code>
+CASE
+WHEN condição1 THEN resultado1
+WHEN condição2 THEN resultado2
+ELSE resultado_padrao
+END
+</code>
+
+Onde "condição1" e "condição2" são as <b>condições que serão avaliadas</b>, "resultado1" e "resultado2" são os <b>resultados a serem retornados</b> se a condição correspondente <b>for verdadeira</b> e "resultado_padrao" é o <b>resultado a ser retornado se nenhuma</b> das condições anteriores <b>for verdadeira</b>.
+
+Por exemplo, imagine que temos uma tabela de produtos com as colunas <b>"nome", "preço" e "desconto"</b>. Podemos usar um <b>CASE statement</b> <i>para retornar</i> o preço final de cada produto, levando em conta o desconto:
+<code>
+SELECT nome, preço,
+CASE
+WHEN desconto > 0 THEN preço * (1 - desconto)
+ELSE preço
+END AS preço_final
+FROM produtos
+</code>
+
+Neste caso, estamos avaliando <b>se o desconto é maior que zero</b>. Se for, calculamos o preço final do produto com desconto. Caso contrário, retornamos o preço original.
+
+O CASE statement é uma <b>ferramenta muito útil</b> para trabalhar com <b>lógica condicional</b> em SQL e pode ser usado de diversas maneiras para <i>realizar tarefas complexas</i>.
+
+O CASE statement <b>também pode ser aninhado</b>, permitindo que condições mais complexas sejam avaliadas. Por exemplo, podemos usar um CASE statement <b>dentro de outro</b> CASE statement para <b>avaliar várias</b> condições e retornar um <i>resultado baseado</i> nelas.
+
+A <b>sintaxe</b> do CASE statement aninhado é a seguinte:
+<code>
+CASE
+WHEN condição1 THEN
+CASE
+WHEN condição2 THEN resultado2
+ELSE resultado3
+END
+ELSE resultado1
+END
+</code>
+
+Neste exemplo, estamos avaliando <b>duas condições</b>. Se a primeira condição for verdadeira, avaliamos a segunda condição usando outro CASE statement. Se a segunda condição for verdadeira, retornamos o resultado2, caso contrário, retornamos o resultado3. Se a primeira condição for falsa, retornamos o resultado1.
+
+O CASE statement <i>também pode ser usado</i> com funções agregadas, como <i>SUM, COUNT e AVG</i>, para realizar cálculos condicionais em grupos de dados. Isso pode ser muito útil em <i>relatórios e análises de dados complexos</i>.
+
+Em resumo, o CASE statement é uma <b>cláusula condicional muito poderosa</b> em SQL, permitindo que expressões complexas sejam avaliadas e resultados condicionais sejam retornados. Ele é uma <b>ferramenta fundamental</b> em qualquer programação de banco de dados e pode ser usado de várias maneiras para <i>manipular dados de forma eficaz e eficiente</i>.
+
+### O Caso Zero/Null Trick
+O caso zero/null trick em SQL é uma técnica usada para <b>retornar valores diferentes</b> de zero em uma consulta SQL.
+
+Em muitos casos, as consultas SQL retornam zero <i>quando não há nenhum registro correspondente nas tabelas consultadas</i>. No entanto, em alguns casos, é necessário retornar um valor diferente de zero, como quando se deseja exibir <i>um valor padrão ou um valor calculado</i>.
+
+Para resolver isso, a técnica zero/null trick <b>envolve o uso</b> de uma subconsulta que retorna um valor nulo quando não há registros correspondentes e, em seguida, utiliza a função <b>COALESCE</b> para retornar o valor desejado.
+
+Por exemplo, se quisermos retornar o número total de vendas de um determinado produto, mas exibir <b>"N/A"</b> em vez de zero quando não houver vendas, poderíamos usar a seguinte consulta:
+<code>
+	SELECT COALESCE((SELECT SUM(sales) FROM products WHERE product_id = 123), 'N/A') AS total_sales;
+</code>
+
+Nesse caso, a subconsulta retorna nulo <b>se não houver nenhum</b> registro correspondente na tabela de produtos, e a função <b>COALESCE</b> substitui esse valor nulo pelo valor <b>"N/A"</b>. <i>Se houver registros correspondentes</i>, a soma das vendas será exibida normalmente.
