@@ -340,6 +340,7 @@ SQL é uma <b>linguagem de consulta estruturada</b> usada para <i>gerenciar e ma
 <b>DDL (Data Definition Language)</b> é uma <i>sublinguagem do SQL (Structured Query Language)</i> que é usada para <i>definir a estrutura e as características</i> dos dados em um banco de dados. Ela é composta por comandos que permitem a <i>criação, alteração e exclusão de objetos do banco de dados</i>, como <i>tabelas, índices, chaves primárias e estrangeiras, entre outros</i>.
 
 Os <b>principais comandos</b> da DDL são:
+<br>
 <b>• CREATE:</b> usado para <b>criar objetos</b> no banco de dados, como <i>tabelas, índices, visões e procedimentos armazenados</i>.
 
 <b>• ALTER:</b> usado para <b>alterar a estrutura</b> dos objetos do banco de dados, como <i>adicionar ou remover</i> colunas de uma tabela.
