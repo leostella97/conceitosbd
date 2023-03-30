@@ -20,11 +20,11 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#group-by-cl%C3%A1usulas-de-ordena%C3%A7%C3%A3o-com-sql">GROUP BY: Cláusulas de ordenação com SQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#having-statment">Having Statment</a></li>
 	<a href="https://github.com/leostella97/conceitosbd#agrupamendo-registros-e-tabelas-com-join-statment">Agrupamendo Registros e Tabelas com Join Statment</a>
-	<li><a href="https://github.com/leostella97/conceitosbd#case-statment"></a>CASE Statment</li>
-	<li><a href="https://github.com/leostella97/conceitosbd#o-caso-zeronull-trick"></a>O Caso Zero/Null Trick</li>
-	<a href="">Personalizando Acessos com Views</a>
+	<li><a href="https://github.com/leostella97/conceitosbd#case-statment">CASE Statment</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#o-caso-zeronull-trick">O Caso Zero/Null Trick</a></li>
+	<a href="https://github.com/leostella97/conceitosbd#personalizando-acessos-com-views">Personalizando Acessos com Views</a>
 	<li></li>
-	<a href="">Overview sobre Automação de Ações com Triggers no MySQL</a>
+	<a href="https://github.com/leostella97/conceitosbd#overview-sobre-automa%C3%A7%C3%A3o-de-a%C3%A7%C3%B5es-com-triggers-no-mysql">Overview sobre Automação de Ações com Triggers no MySQL</a>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
