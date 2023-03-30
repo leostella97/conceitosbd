@@ -19,7 +19,7 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#order-by-cl%C3%A1usulas-de-ordena%C3%A7%C3%A3o-com-sql">ORDER BY: Cláusulas de ordenação com SQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#group-by-cl%C3%A1usulas-de-ordena%C3%A7%C3%A3o-com-sql">GROUP BY: Cláusulas de ordenação com SQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#having-statment">Having Statment</a></li>
-	<a href="https://github.com/leostella97/conceitosbd#agrupamendo-registros-e-tabelas-com-join-statment">Agrupamendo Registros e Tabelas com Join Statment</a>
+	<a href="https://github.com/leostella97/conceitosbd#agrupamendo-registros-e-tabelas-com-join-statment"><b>Agrupamendo Registros e Tabelas com Join Statment</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#case-statment">CASE Statment</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#o-caso-zeronull-trick">O Caso Zero/Null Trick</a></li>
 	<a href="https://github.com/leostella97/conceitosbd#personalizando-acessos-com-views"><b>Personalizando Acessos com Views</b></a>
