@@ -22,7 +22,7 @@
 	<a href="https://github.com/leostella97/conceitosbd#agrupamendo-registros-e-tabelas-com-join-statment">Agrupamendo Registros e Tabelas com Join Statment</a>
 	<li><a href="https://github.com/leostella97/conceitosbd#case-statment">CASE Statment</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#o-caso-zeronull-trick">O Caso Zero/Null Trick</a></li>
-	<a href="https://github.com/leostella97/conceitosbd#personalizando-acessos-com-views">Personalizando Acessos com Views</a>
+	<a href="https://github.com/leostella97/conceitosbd#personalizando-acessos-com-views"><b>Personalizando Acessos com Views</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#overview-sobre-automa%C3%A7%C3%A3o-de-a%C3%A7%C3%B5es-com-triggers-no-mysql">Overview sobre Automação de Ações com Triggers no MySQL</a></li>
 </ul>
 
@@ -986,3 +986,6 @@ Resumindo o que foi falado, a automação de ações com triggers no MySQL é um
 <b>• Triggers:</b> são <b>rotinas</b> que são automaticamente executadas em resposta a determinados eventos, como a <i>inserção, atualização ou exclusão</i> de dados em uma tabela. Eles permitem que você defina ações personalizadas que devem ser executadas sempre que um evento específico ocorrer. Os <i>"triggers"</i> podem ser usados para <i>implementar regras de negócios complexas ou para manter a integridade dos dados</i>.
 
 Em resumo, as "assertions" são usadas para <b>definir restrições</b> declarativas sobre os dados em uma tabela, enquanto os "triggers" são usados para <b>executar ações personalizadas</b> em resposta a eventos específicos. Ambos são recursos poderosos do SQL que permitem que você crie sistemas de banco de dados mais <i>robustos e confiáveis</i>.
+
+
+Agradecimentos a <a href="https://dio.me">DIO - Digital Inovation One</a> pelo conhecimento
