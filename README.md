@@ -23,7 +23,13 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#case-statment">CASE Statment</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#o-caso-zeronull-trick">O Caso Zero/Null Trick</a></li>
 	<a href="https://github.com/leostella97/conceitosbd#personalizando-acessos-com-views"><b>Personalizando Acessos com Views</b></a>
-	<li><a href="https://github.com/leostella97/conceitosbd#overview-sobre-automa%C3%A7%C3%A3o-de-a%C3%A7%C3%B5es-com-triggers-no-mysql">Overview sobre Automação de Ações com Triggers no MySQL</a></li>
+	<a href="https://github.com/leostella97/conceitosbd#overview-sobre-automa%C3%A7%C3%A3o-de-a%C3%A7%C3%B5es-com-triggers-no-mysql">Overview sobre Automação de Ações com Triggers no MySQL</a>
+	<li><a href="https://github.com/leostella97/conceitosbd#assertions-e-triggers">Assertions e Triggers</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#funcionamento-de-assertions">Funcionamento de Assertions</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#especificando-constraints-com-triggers">Especificando Constraints com Triggers</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-before-insert-no-mysql">Exemplo de Trigger BEFORE INSERT no MySQL</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-after-insert-no-mysql">Exemplo de Trigger AFTER INSERT no MySQL</a></li>
+	<li><a href="
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
