@@ -960,6 +960,8 @@ Neste exemplo, é criada uma procedure chamada <b>"sp_insere_cliente"</b> que in
 Para <b>chamar</b> essa procedure, basta utilizar o comando <b>CALL</b> seguido do <b>nome da procedure</b> e dos <b>valores dos parâmetros</b>:
 <code>
 CALL sp_insere_cliente('Naymar', 'neymar@corinthians.com.br');
+</code>
+
 Esse comando vai <b>inserir</b> um novo registro na tabela <b>"clientes"</b> com os valores "Neymar" e "neymar@corinthians.com.br" nas colunas <b>"nome"</b> e <b>"email"</b>.
 
 ## Overview sobre Automação de Ações com Triggers no MySQL
