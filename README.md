@@ -439,6 +439,7 @@ SELECT coluna1, coluna2 FROM tabela2;
 Aqui, duas consultas <b>SELECT</b> são combinadas usando o comando <b>EXCEPT</b>.
 
 Continuando...
+<br>
 <b>• MOD (%):</b>
 O operador <b>MOD</b> é usado para <b>retornar o resto</b> de uma divisão. Por exemplo, se você quiser <i>encontrar todos os registros</i> em uma tabela cujo id seja ímpar, você pode usar o operador MOD da seguinte forma:
 <code>
