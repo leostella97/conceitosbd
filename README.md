@@ -988,4 +988,4 @@ Resumindo o que foi falado, a automação de ações com triggers no MySQL é um
 Em resumo, as "assertions" são usadas para <b>definir restrições</b> declarativas sobre os dados em uma tabela, enquanto os "triggers" são usados para <b>executar ações personalizadas</b> em resposta a eventos específicos. Ambos são recursos poderosos do SQL que permitem que você crie sistemas de banco de dados mais <i>robustos e confiáveis</i>.
 
 <br><br><br>
-Agradecimentos a <a href="https://dio.me">DIO - Digital Inovation One</a> pelo conhecimento
+<p style="text-align: center;"> Agradecimentos a <a href="https://dio.me">DIO - Digital Inovation One</a> pelo conhecimento</p>
