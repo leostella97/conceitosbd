@@ -23,6 +23,8 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#case-statment"></a>CASE Statment</li>
 	<li><a href="https://github.com/leostella97/conceitosbd#o-caso-zeronull-trick"></a>O Caso Zero/Null Trick</li>
 	<a href="">Personalizando Acessos com Views</a>
+	<li></li>
+	<a href="">Overview sobre Automação de Ações com Triggers no MySQL</a>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
@@ -752,3 +754,232 @@ USE meu_banco_de_dados;
 Isso irá <i>selecionar o esquema</i> <b>"meu_banco_de_dados"</b> para uso em <i>consultas subsequentes</i>.
 
 As cláusulas DDL e os esquemas de banco de dados <b>são importantes</b> para <b>criar e gerenciar</b> objetos de banco de dados no MySQL. Eles nos permitem <b>organizar e controlar</b> melhor os dados em nossos <b>aplicativos e sistemas</b>.
+
+## Lógica de Programação com SQL Dinâmico
+A <b>lógica de programação</b> é um <i>conjunto de técnicas utilizadas para desenvolver algoritmos</i> que <b>resolvem problemas</b> computacionais. O <b>SQL dinâmico</b> é uma técnica utilizada para <b>construir instruções</b> SQL em tempo de execução, de acordo com as necessidades do programa.
+
+Para <b>utilizar</b> o SQL dinâmico, é <i>necessário ter um bom entendimento da sintaxe</i> do SQL, bem como da estrutura de banco de dados utilizado. É importante também ter <b>conhecimento sobre</b> os tipos de dados e as operações que podem ser realizadas no SQL.
+
+A <b>lógica de programação</b> pode ser aplicada ao SQL dinâmico para criar instruções SQL mais <i>eficientes e otimizadas</i> para cada situação. Isso envolve a <b>utilização de técnicas</b> de controle de fluxo, como <i>estruturas de decisão e repetição</i>, para criar instruções SQL que <b>atendam às necessidades</b> específicas do programa.
+
+Alguns exemplos de aplicação da <b>lógica de programação</b> com SQL dinâmico incluem a <i>criação de consultas</i> SQL personalizadas com <i>base em dados fornecidos</i> pelo usuário, <i>a geração de relatórios dinâmicos</i> a partir de consultas SQL complexas e a <i>construção de scripts</i> de migração de dados para mover dados de um banco de dados para outro.
+
+A <b>lógica de programação é fundamental</b> para a utilização eficiente do SQL dinâmico, permitindo que os desenvolvedores <i>criem instruções SQL personalizadas e otimizadas</i> para atender às necessidades específicas do programa.
+
+Além disso, é importante <b>mencionar que</b> a lógica de programação com SQL dinâmico pode ser aplicada em diversos tipos de banco de dados, como <i>MySQL, PostgreSQL, SQL Server, Oracle, entre outros</i>.
+
+Outra técnica <b>importante</b> que pode ser <i>utilizada em conjunto com a lógica de programação e o SQL dinâmico</i> é a <b>normalização</b> de banco de dados. A normalização é um processo que <b>permite organizar</b> as informações de um banco de dados de maneira <i>mais eficiente, reduzindo</i> a redundância de dados e <i>garantindo a integridade</i> das informações.
+
+Ao utilizar a <b>normalização de banco de dados</b> em conjunto com a lógica de programação e o SQL dinâmico, é possível criar instruções SQL mais <b>complexas e eficientes</b>, que lidam com tabelas normalizadas e relacionamentos entre elas.
+
+Por fim, é importante mencionar que a lógica de programação com SQL dinâmico é uma <b>habilidade importante</b> para os profissionais de programação e desenvolvimento de banco de dados. Com ela, é possível <i>criar aplicações mais flexíveis, otimizadas e seguras</i>, que atendem às necessidades específicas dos usuários.
+
+Em resumo, a lógica de programação com SQL dinâmico é uma <b>técnica importante</b> que permite a criação de instruções SQL personalizadas e otimizadas, que <b>atendem às necessidades</b> específicas do programa. É importante aplicar <b>boas práticas de segurança</b> ao utilizar o SQL dinâmico, e a normalização de banco de dados<i> pode ser utilizada em conjunto</i> para criar instruções SQL mais complexas e eficientes.
+
+Um <b>exemplo de aplicação</b> da lógica de programação com SQL dinâmico é a criação de uma <i>consulta personalizada para buscar informações</i> em um banco de dados. Suponha que temos uma tabela chamada <b>"Clientes"</b> com as seguintes colunas: <i>ID, Nome, Sobrenome, Email e Telefone</i>.
+
+Em um programa, podemos criar uma tela de busca que permita ao usuário <b>pesquisar clientes</b> com base em diferentes critérios, como <i>nome, sobrenome ou email</i>. Para isso, podemos utilizar o SQL dinâmico para construir a consulta SQL de acordo com o critério selecionado pelo usuário.
+
+Por exemplo, se o usuário deseja <b>buscar clientes</b> pelo nome, podemos construir a consulta SQL dinamicamente da seguinte maneira:
+<code>
+	DECLARE @nome VARCHAR(50) = 'João';
+	DECLARE @sql VARCHAR(MAX);
+
+	SET @sql = 'SELECT * FROM Clientes WHERE Nome = ''' + @nome + '''';
+
+	EXEC (@sql);
+</code>
+Neste exemplo, a variável <b>@nome</b> contém o valor do nome <b>digitado pelo usuário</b>. A consulta SQL é construída dinamicamente utilizando a função <b>EXEC()</b>, que permite <i>executar uma instrução SQL</i> em tempo de execução.
+
+Ao executar este código, será <b>gerada uma consulta SQL</b> do tipo:
+
+<code>
+	SELECT * FROM Clientes WHERE Nome = 'Yoda';
+</code>
+Assim, o programa pode <b>construir</b> consultas SQL personalizadas com base nos critérios escolhidos pelo <i>usuário, tornando a busca mais flexível e eficiente</i>.
+
+### Overview: Storage Objects e SQL Dinâmico
+Os <b>objetos de armazenamento</b> e <b>SQL dinâmico</b> são dois <i>conceitos diferentes, mas que podem estar relacionados</i> em alguns contextos.
+
+Os objetos de armazenamento se <b>referem aos objetos</b> que armazenam dados em um banco de dados, como <i>tabelas, índices, views e procedimentos armazenados</i>. Esses objetos são <b>criados e gerenciados</b> através da linguagem SQL, que é a linguagem padrão para interagir com bancos de dados relacionais.
+
+Já o SQL dinâmico é uma técnica que <b>permite a criação</b> de consultas SQL em tempo de execução, com base em parâmetros definidos pelo usuário. Isso pode ser útil em casos em que as consultas <i>precisam ser adaptadas de acordo</i> com as condições específicas de um determinado momento.
+
+Em alguns casos, os objetos de armazenamento <i>podem ser usados</i> em conjunto com o SQL dinâmico, por exemplo, quando se deseja <b>criar uma consulta</b> que consulte uma tabela temporária criada em tempo de execução. Nesse caso, é possível criar a tabela temporária usando um objeto de armazenamento e, em seguida, <b>utilizar o SQL dinâmico</b> para criar a consulta que a utiliza.
+
+Os <b>objetos de armazenamento e o SQL dinâmico</b> são conceitos distintos, mas que podem ser usados em conjunto para criar soluções mais flexíveis e adaptáveis em bancos de dados relacionais.
+
+Além disso, o SQL dinâmico pode ser usado para <b>criar consultas</b> mais <i>complexas e personalizadas, que não podem ser facilmente criadas com as opções padrão do SQL</i>. Por exemplo, é possível criar uma consulta que retorne resultados diferentes com base em diferentes conjuntos de critérios de pesquisa, que podem ser <b>definidos pelo usuário</b> em <b>tempo de execução</b>.
+
+No entanto, é importante lembrar que o <b>uso excessivo</b> do SQL dinâmico pode levar a <b>problemas de segurança</b>, como a injeção de SQL, que pode permitir que um atacante execute comandos maliciosos no banco de dados. Por isso, é <b>importante</b> garantir que as consultas dinâmicas sejam criadas de <i>forma segura e cuidadosa</i>, utilizando técnicas como a <i>validação de entrada de dados e a parametrização de consultas</i>.
+
+Resumindo, os objetos de armazenamento e o SQL dinâmico são <b>dois conceitos importantes</b> no contexto de bancos de dados relacionais. Enquanto os objetos de armazenamento são usados para armazenar dados em tabelas e outros objetos de banco de dados, o SQL dinâmico permite a criação de consultas personalizadas em tempo de execução, o que pode ser útil para adaptar as consultas às condições específicas de um determinado momento.
+
+### Statement de controle de fluxo
+O controle de fluxo em SQL pode ser feito usando <b>declarações condicionais</b>, como <b>IF-ELSE, CASE-WHEN e WHILE</b>.
+
+A <b>declaração IF-ELSE</b> é usada para executar um bloco de código se uma condição for <b>verdadeira</b> e outro bloco de código se a condição for <b>falsa</b>. Por exemplo:
+<code>
+IF condição THEN
+   -- bloco de código a ser executado se a condição for verdadeira
+ELSE
+   -- bloco de código a ser executado se a condição for falsa
+END IF;
+</code>
+
+A <b>declaração CASE-WHEN</b> é usada para <i>avaliar uma expressão e executar um bloco de código</i> correspondente com base no valor da expressão. Por exemplo:
+<code>
+CASE expressão
+   WHEN valor1 THEN
+      -- bloco de código a ser executado se a expressão for igual a valor1
+   WHEN valor2 THEN
+      -- bloco de código a ser executado se a expressão for igual a valor2
+   ELSE
+      -- bloco de código a ser executado se nenhum dos valores anteriores corresponder à expressão
+END CASE;
+</code>
+
+A <b>declaração WHILE</b> é usada para executar um bloco de código repetidamente enquanto uma condição for <b>verdadeira</b>. Por exemplo:
+<code>
+WHILE condição LOOP
+   -- bloco de código a ser executado enquanto a condição for verdadeira
+END LOOP;
+</code>
+Essas declarações podem ser combinadas para criar <b>fluxos de controle (statement)</b> mais complexos em SQL.
+
+### Condition Handling
+A <b>manipulação de condições</b> em bancos de dados NoSQL pode variar dependendo do tipo de banco de dados NoSQL que está sendo utilizado. No entanto, em geral, os bancos de dados NoSQL <b>têm seus próprios</b> mecanismos de <b>manipulação de condições</b>.
+
+Por exemplo, em bancos de dados NoSQL baseados em documentos, como o <b>MongoDB</b>, a <i>manipulação de condições é realizada usando a linguagem de consulta de documentos do MongoDB</i>, que inclui operadores de consulta, como <b>$eq (igual), $gt (maior que), $lt (menor que) e outros</b>. Esses operadores podem ser usados para filtrar documentos com base em <b>condições específicas</b>.
+
+Já em bancos de dados NoSQL <b>baseados em chave-valor</b>, como o Redis, a <b>manipulação de condições</b> é feita por meio do uso de comandos específicos, como <b>ZRANGEBYSCORE</b> (para recuperar um intervalo de valores com base em uma pontuação) ou <b>HGETALL</b> (para recuperar todos os valores em um hash). Esses comandos podem ser usado para realizar <b>operações condicionais</b> em dados armazenados no Redis.
+
+Em resumo, a manipulação de condições em bancos de dados NoSQL é geralmente <i>feita usando uma combinação de operadores de consulta ou comandos específicos</i> de banco de dados, dependendo do tipo de banco de dados NoSQL que está sendo utilizado.
+
+### Storage Objects: FUNCTIONS, PROCEDURES e EVENTS
+<b>Funções, procedimentos e eventos</b> são objetos de armazenamento comuns em bancos de dados SQL. No entanto, em bancos de dados NoSQL, a forma como esses objetos são implementados pode variar.
+
+Em bancos de dados NoSQL baseados em documentos, como o MongoDB, as <i>funções são escritas em JavaScript e são usadas para realizar operações complexas nos documentos armazenados</i>. Os procedimentos armazenados são implementados como funções JavaScript armazenadas no servidor e podem ser chamados de forma síncrona ou assíncrona. <b>Events</b>, por sua vez, são <b>triggers</b> que disparam uma ação quando um determinado evento ocorre no banco de dados, <b>como a inserção</b> de um novo documento.
+
+Já em bancos de dados NoSQL baseados em gráficos, como o Neo4j, <i>as funções são escritas em Cypher, a linguagem de consulta do Neo4j</i>. Os procedimentos são escritos em Java e podem ser chamados de forma síncrona ou assíncrona. Os eventos, chamados de triggers no Neo4j, são acionados <b>quando uma ação específica ocorre</b> no banco de dados, como a criação de um novo nó.
+
+Em geral, esses objetos de armazenamento têm a função de <b>aumentar a eficiência e a funcionalidade</b> do banco de dados, permitindo que os usuários <i>escrevam código personalizado para manipular dados e responder</i> a eventos específicos.
+
+### Exemplo de Função no MySQL
+Em SQL, as <b>funções são usadas para executar</b> uma determinada tarefa ou operação e retornar um valor. Elas podem ser usadas em <b>consultas SELECT</b>, para <i>calcular valores, converter tipos de dados, manipular strings e datas, entre outras operações</i>.
+
+Algumas <b>funções comuns</b> em SQL incluem:
+
+<b>• Funções de agregação:</b> como SUM, AVG, COUNT, MAX e MIN, que são usadas para <i>realizar cálculos</i> em um conjunto de dados.
+<b>• Funções de conversão de tipo:</b> como CAST e CONVERT, que são usadas para <i>converter um tipo</i> de dado em outro.
+<b>• Funções de manipulação de strings:</b> como SUBSTRING, REPLACE e UPPER/LOWER, que são usadas para <i>manipular cadeias de caracteres</i>.
+<b>• Funções de manipulação de datas:</b> como DATEADD, DATEDIFF e GETDATE, que são usadas para <i>manipular datas e horários</i>.
+
+Ao usar <b>funções em SQL</b>, é possível <i>simplificar as consultas e automatizar tarefas repetitivas</i>.
+
+A sintaxe básica para criar uma função no MySQL é a seguinte:
+<code>
+	CREATE FUNCTION nome_da_funcao (argumentos)
+	RETURNS tipo_de_retorno
+	BEGIN
+    	-- Corpo da função
+	END;
+</code>
+
+Onde:
+<b>• nome_da_funcao:</b> é o nome que você deseja dar à sua função.
+argumentos são os parâmetros que a função recebe. Você pode ter nenhum ou vários argumentos separados por vírgulas. Cada argumento tem um nome e um tipo.
+<b>• tipo_de_retorno:</b> é o tipo de dado que a função retorna. Pode ser um tipo de dado nativo do MySQL (como INTEGER, VARCHAR, etc.) ou um tipo de dado definido pelo usuário.
+<b>• BEGIN e END:</b> definem o corpo da função. É aqui que você escreve as instruções que a função executará.
+Por exemplo, se você quiser criar uma <b>função que receba</b> dois números e retorne a soma deles, você pode usar o seguinte código:
+<code>
+	CREATE FUNCTION soma (a INT, b INT)
+	RETURNS INT
+	BEGIN
+    	RETURN a + b;
+	END;
+</code>
+
+Depois de criar a função, você pode usá-la como <i>qualquer outra função</i> no MySQL. Por exemplo:
+<code>
+	SELECT soma(2, 3); -- retorna 5
+</code>
+
+Dentro do <b>corpo da função</b>, você pode escrever qualquer código SQL que seja válido no MySQL. Você pode usar instruções <b>SELECT, UPDATE, INSERT, DELETE, IF, WHILE, entre outras</b>.
+
+Além disso, você pode declarar variáveis dentro da função usando a <b>palavra-chave DECLARE</b>, como no exemplo abaixo:
+<code>
+	CREATE FUNCTION calcula_salario (salario_base DECIMAL(10,2), horas_trabalhadas INT)
+	RETURNS DECIMAL(10,2)
+	BEGIN
+    	DECLARE salario_total DECIMAL(10,2);
+    	SET salario_total = salario_base * horas_trabalhadas;
+    	RETURN salario_total;
+	END;
+</code>
+Neste exemplo, a <b>função calcula</b> o salário total de um funcionário com <i>base no salário base e no número de horas trabalhadas</i>. A função declara a variável <b>"salario_total"</b> usando a <b>palavra-chave DECLARE</b> e, em seguida, a popula com o valor calculado na linha seguinte usando a instrução <b>SET</b>. Finalmente, a função <b>retorna o valor</b> da variável <b>"salario_total"</b>.
+
+Uma vez que a função tenha sido criada, você pode chamá-la em <b>qualquer lugar</b> em que seria apropriado chamar uma função no MySQL. Por exemplo:
+<code>
+	SELECT calcula_salario(1000.00, 160); -- retorna 160000.00
+</code>
+
+### Exemplo de Precedure no MySQL
+Em SQL, uma <b>procedure (procedimento armazenado)</b> é um bloco de código SQL que é armazenado no banco de dados e pode ser <i>chamado e executado várias vezes</i>. Elas são usadas para <i>automatizar tarefas complexas e repetitivas</i> que envolvem várias etapas ou consultas SQL.
+
+As procedures podem receber parâmetros de <b>entrada e de saída</b> e são especialmente úteis para <b>realizar operações complexas</b> que envolvem várias <i>consultas SQL e lógica de programação</i>. Por exemplo, uma procedure pode ser criada para <b>calcular uma média</b> ponderada de um <i>conjunto de dados, realizar uma atualização em massa de uma tabela ou gerar um relatório complexo</i>.
+
+Algumas <b>vantagens</b> do uso de procedures em SQL incluem:
+
+<b>• Redução da complexidade da lógica de programação:</b> pois as tarefas complexas podem ser divididas em etapas menores e mais gerenciáveis.
+<b>• Maior desempenho:</b> pois as procedures são compiladas e armazenadas no banco de dados, o que reduz o tempo de execução.
+<b>• Maior segurança:</b> pois as procedures podem ser definidas com permissões de acesso restritas para garantir a segurança dos dados do banco.
+As procedures são uma ferramenta útil para <i>simplificar e automatizar</i> tarefas complexas em SQL.
+
+Segue abaixo um exemplo de criação de uma procedure no MySQL:
+<code>
+CREATE PROCEDURE nome_da_procedure (IN parametro1 INT, IN parametro2 VARCHAR(50))
+BEGIN
+   -- Corpo da procedure aqui
+END;
+</code>
+
+Neste exemplo, é criada uma procedure chamada <b>"nome_da_procedure"</b> com dois parâmetros de entrada: um inteiro chamado <b>"parametro1"</b> e uma string de até 50 caracteres chamada <b>"parametro2"</b>. O corpo da procedure deve ser definido dentro do <b>bloco BEGIN e END</b>, e pode conter <b>uma ou mais</b> instruções SQL.
+
+<code>
+CREATE PROCEDURE sp_insere_cliente (IN nome VARCHAR(50), IN email VARCHAR(100))
+BEGIN
+   INSERT INTO clientes (nome, email) VALUES (nome, email);
+END;
+</code>
+
+Neste exemplo, é criada uma procedure chamada <b>"sp_insere_cliente"</b> que insere um novo registro na tabela <b>"clientes"</b> do banco de dados. A procedure <b>recebe dois parâmetros</b> de entrada: um string chamado <b>"nome"</b> e uma string chamada <b>"email"</b>. Na instrução <b>INSERT INTO</b>, os valores dos parâmetros são usados para <b>inserir um novo</b> registro na tabela.
+
+Para <b>chamar</b> essa procedure, basta utilizar o comando <b>CALL</b> seguido do <b>nome da procedure</b> e dos <b>valores dos parâmetros</b>:
+<code>
+CALL sp_insere_cliente('Naymar', 'neymar@corinthians.com.br');
+Esse comando vai <b>inserir</b> um novo registro na tabela <b>"clientes"</b> com os valores "Neymar" e "neymar@corinthians.com.br" nas colunas <b>"nome"</b> e <b>"email"</b>.
+
+## Overview sobre Automação de Ações com Triggers no MySQL
+A <b>automação de ações com triggers</b> no MySQL é uma funcionalidade muito útil que <i>permite automatizar tarefas</i> em um banco de dados, tornando o processo de gerenciamento de dados mais <b>eficiente e fácil</b>.
+
+As triggers são procedimentos armazenados que são <b>executados automaticamente</b> quando um determinado evento ocorre no banco de dados, como a <i>inserção, atualização ou exclusão</i> de registros em uma tabela. Com as triggers, é possível definir ações que serão executadas automaticamente em resposta a um determinado evento, como a <i>atualização de um registro</i> em uma tabela.
+
+Por exemplo, se você deseja <b>atualizar um campo</b> em uma tabela sempre que <i>outro campo for atualizado</i>, você pode criar uma trigger que <b>execute automaticamente</b> a atualização do campo. Isso <i>elimina a necessidade de atualizar</i> o campo manualmente toda vez que o outro campo é atualizado.
+
+As triggers também podem ser usadas para <i>validar dados, garantir a integridade referencial e implementar restrições de segurança</i>. Por exemplo, você pode usar uma trigger para <b>garantir</b> que um valor inserido em uma tabela <i>esteja dentro</i> de um intervalo específico, ou para impedir que um registro <i>seja excluído</i> de uma tabela se ele estiver relacionado a outros registros em outras tabelas.
+
+A automação de ações com triggers no MySQL é uma <b>funcionalidade poderosa</b> que pode tornar o gerenciamento de dados <b>mais eficiente e fácil</b>. É importante ter um bom <b>entendimento da sintaxe</b> e do funcionamento das triggers antes de implementá-las em seu banco de dados.
+
+Além disso, é importante destacar que as triggers <b>podem ter impacto</b> no desempenho do banco de dados, especialmente se forem mal projetadas ou usadas de <b>forma inadequada</b>. Por isso, é importante levar em consideração as melhores práticas ao usar triggers, como <i>limitar o número de triggers em uma tabela e otimizar a lógica da trigger</i> para evitar operações desnecessárias.
+
+Outro ponto <b>importante</b> é que as triggers podem ser usadas em <b>conjunto</b> com outras funcionalidades do MySQL, como <i>stored procedures e views</i>, para criar soluções mais <i>avançadas e automatizadas</i> de gerenciamento de dados. Por exemplo, você pode criar uma trigger que chama uma stored procedure sempre que um <b>determinado evento ocorre</b> no banco de dados.
+
+Resumindo o que foi falado, a automação de ações com triggers no MySQL é uma <b>funcionalidade poderosa</b> que pode tornar o gerenciamento de dados <b>mais eficiente e fácil</b>, mas que também <b>requer cuidado e atenção</b> ao ser implementada. Com as melhores práticas e a compreensão adequada da sintaxe e do funcionamento das triggers, é possível criar soluções <i>avançadas e automatizadas</i> de gerenciamento de dados no MySQL.
+
+### Assertions e Triggers
+<b>• Aassertions:</b> são <b>condições declarativas</b> que <i>especificam restrições sobre os dados em uma tabela</i>. Elas permitem que você <b>defina regras</b> complexas de integridade de dados que vão além das verificações simples de <b>chave primária ou estrangeira</b>. As <b>"assertions"</b> são usadas para garantir que os dados armazenados em uma tabela estejam sempre em um estado consistente.
+
+<b>• Triggers:</b> são <b>rotinas</b> que são automaticamente executadas em resposta a determinados eventos, como a <i>inserção, atualização ou exclusão</i> de dados em uma tabela. Eles permitem que você defina ações personalizadas que devem ser executadas sempre que um evento específico ocorrer. Os <i>"triggers"</i> podem ser usados para <i>implementar regras de negócios complexas ou para manter a integridade dos dados</i>.
+
+Em resumo, as "assertions" são usadas para <b>definir restrições</b> declarativas sobre os dados em uma tabela, enquanto os "triggers" são usados para <b>executar ações personalizadas</b> em resposta a eventos específicos. Ambos são recursos poderosos do SQL que permitem que você crie sistemas de banco de dados mais <i>robustos e confiáveis</i>.
