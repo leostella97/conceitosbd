@@ -40,7 +40,7 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#indice-bitmap">Índice Bitmap</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-com-%C3%ADndices-hash-com-sql-no-mysql">Exemplo com Índices HASH com SQL no MySQL</a></li>
 	<a href="https://github.com/leostella97/conceitosbd#normaliza%C3%A7%C3%A3o-de-banco-de-dados"><b>Normalização de Banco de Dados</b></a>
-	<li><a href="https://github.com/leostella97/conceitosbd#depend%C3%AAncias-funcionais">https://github.com/leostella97/conceitosbd#depend%C3%AAncias-funcionais</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#depend%C3%AAncias-funcionais">Dependências Funcionais</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#problemas-da-redund%C3%A2ncia">Problemas da Redundância</a></li>
 </ul>
 
