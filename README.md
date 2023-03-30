@@ -1336,4 +1336,3 @@ No geral, a <i>arquitetura do InnoDB</i> é altamente sofisticada e é projetada
 
 <br><br><br>
 Agradecimentos a <a href="https://dio.me">DIO - Digital Inovation One</a> pelo conhecimento
-
