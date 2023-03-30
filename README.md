@@ -1056,7 +1056,7 @@ O trigger é criado com o nome <b>"insere_historico_cliente"</b> e é definido p
 
 Dentro do corpo do trigger, a cláusula <b>BEGIN</b> e <b>END</b> é usada para agrupar as instruções a serem executadas pelo trigger. A instrução <b>INSERT INTO</b> é usada para inserir os dados do cliente na tabela de <b>histórico_clientes</b>. Os valores são obtidos a partir da <b>palavra-chave "NEW"</b>, que é uma referência à linha recém-inserida na tabela <b>"clientes"</b>. A data atual é adicionada à coluna <b>data_cadastro</b> usando a função <b>NOW()</b>.
 
-### Exemplo de Gatilho BEFORE UPDATE TRIGGER no MySQL
+### Exemplo de Trigger BEFORE UPDATE TRIGGER no MySQL
 Suponha que temos a tabela <b>"clientes"</b> com as colunas <b>"id", "nome", "email" e "idade"</b>. Desejamos que a idade do cliente <b>nunca seja menor do que zero</b>. Para isso, podemos criar o seguinte trigger:
 <code>
 CREATE TRIGGER antes_atualizar_cliente
