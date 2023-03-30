@@ -1036,8 +1036,38 @@ END;
 Dessa forma, se alguém tentar inserir um novo registro na tabela "clientes" com um email que já existe, o Trigger será acionado e a inserção será cancelada, exibindo a mensagem de erro <b>'Já existe um cliente cadastrado com esse e-mail.'</b>.
 
 ### Exemplo de Trigger AFTER INSERT no MySQL
+Suponha que você tenha uma tabela chamada <b>"clientes"</b> e queira criar uma tabela de histórico para <b>armazenar as informações</b> de cada cliente que é <b>inserido</b> na tabela principal. O código abaixo mostra <i>como criar um trigger que insere os dados</i> do cliente na tabela de histórico após uma <b>inserção</b> na tabela principal:
+<code>
+CREATE TRIGGER insere_historico_cliente AFTER INSERT ON clientes
+FOR EACH ROW
+BEGIN
+    INSERT INTO historico_clientes (id_cliente, nome, email, telefone, data_cadastro)
+    VALUES (NEW.id, NEW.nome, NEW.email, NEW.telefone, NOW());
+END;
+</code>
+
+O trigger é criado com o nome <b>"insere_historico_cliente"</b> e é definido para executar <b>AFTER INSERT</b> na tabela <b>"clientes"</b>. A cláusula <b>FOR EACH ROW</b> indica que o trigger deve ser <i>executado para cada linha que é inserida</i> na tabela.
+
+Dentro do corpo do trigger, a cláusula <b>BEGIN</b> e <b>END</b> é usada para agrupar as instruções a serem executadas pelo trigger. A instrução <b>INSERT INTO</b> é usada para inserir os dados do cliente na tabela de <b>histórico_clientes</b>. Os valores são obtidos a partir da <b>palavra-chave "NEW"</b>, que é uma referência à linha recém-inserida na tabela <b>"clientes"</b>. A data atual é adicionada à coluna <b>data_cadastro</b> usando a função <b>NOW()</b>.
+
+### Exemplo de Gatilho BEFORE UPDATE TRIGGER no MySQL
+Suponha que temos a tabela <b>"clientes"</b> com as colunas <b>"id", "nome", "email" e "idade"</b>. Desejamos que a idade do cliente <b>nunca seja menor do que zero</b>. Para isso, podemos criar o seguinte trigger:
+<code>
+CREATE TRIGGER antes_atualizar_cliente
+BEFORE UPDATE ON clientes
+FOR EACH ROW
+BEGIN
+    IF NEW.idade < 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'A idade não pode ser negativa';
+    END IF;
+END;
+</code>
+
+Neste exemplo, o trigger é criado com o nome <b>"antes_atualizar_cliente"</b> e é acionado antes de uma <b>atualização (UPDATE)</b> ser feita na tabela <b>"clientes"</b>. A <b>condição IF</b> verifica se o novo valor da coluna <b>"idade"</b> é menor do que zero. Se isso for verdadeiro, o <b>sinalizador (SIGNAL)</b> é acionado, com a mensagem de erro <b>'A idade não pode ser negativa'</b>.
+
+Dessa forma, se alguém tentar atualizar a idade de um cliente para um <b>valor negativo</b>, o trigger irá <b>impedir</b> a atualização e exibirá a mensagem de erro <b>'A idade não pode ser negativa'</b>.
 
 
 <br><br><br>
-Agradecimentos a <a target="_blank" href="https://dio.me">DIO - Digital Inovation One</a> pelo conhecimento
+Agradecimentos a <a href="https://dio.me">DIO - Digital Inovation One</a> pelo conhecimento
 
