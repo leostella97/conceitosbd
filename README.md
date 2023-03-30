@@ -23,14 +23,14 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#case-statment">CASE Statment</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#o-caso-zeronull-trick">O Caso Zero/Null Trick</a></li>
 	<a href="https://github.com/leostella97/conceitosbd#personalizando-acessos-com-views"><b>Personalizando Acessos com Views</b></a>
-	<a href="https://github.com/leostella97/conceitosbd#overview-sobre-automa%C3%A7%C3%A3o-de-a%C3%A7%C3%B5es-com-triggers-no-mysql">Overview sobre Automação de Ações com Triggers no MySQL</a>
+	<a href="https://github.com/leostella97/conceitosbd#overview-sobre-automa%C3%A7%C3%A3o-de-a%C3%A7%C3%B5es-com-triggers-no-mysql"><b>Overview sobre Automação de Ações com Triggers no MySQL</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#assertions-e-triggers">Assertions e Triggers</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#funcionamento-de-assertions">Funcionamento de Assertions</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#especificando-constraints-com-triggers">Especificando Constraints com Triggers</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-before-insert-no-mysql">Exemplo de Trigger BEFORE INSERT no MySQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-after-insert-no-mysql">Exemplo de Trigger AFTER INSERT no MySQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-before-update-trigger-no-mysql">Exemplo de Trigger BEFORE UPDATE TRIGGER no MySQL</a></li>
-	<a href="https://github.com/leostella97/conceitosbd#fundamentos-de-indexa%C3%A7%C3%A3o-sgbds-com-mysql">Fundamentos de Indexação SGBDs com MySql</a>
+	<a href="https://github.com/leostella97/conceitosbd#fundamentos-de-indexa%C3%A7%C3%A3o-sgbds-com-mysql"><b>Fundamentos de Indexação SGBDs com MySql</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-%C3%ADndice-com-sql-no-mysql">Exemplo de Índice com SQL no MySQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#%C3%ADndices-prim%C3%A1rios">Índices Primários</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#%C3%ADndices-clusterizados">Índices Clusterizados</a></li>
@@ -39,7 +39,7 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#%C3%ADndices-%C3%BAnicos-e-multicolunas">índices únicos e Multicolunas</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#indice-bitmap">Índice Bitmap</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-com-%C3%ADndices-hash-com-sql-no-mysql">Exemplo com Índices HASH com SQL no MySQL</a></li>
-	<a href="https://github.com/leostella97/conceitosbd#normaliza%C3%A7%C3%A3o-de-banco-de-dados">Normalização de Banco de Dados</a>
+	<a href="https://github.com/leostella97/conceitosbd#normaliza%C3%A7%C3%A3o-de-banco-de-dados"><b>Normalização de Banco de Dados</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#depend%C3%AAncias-funcionais">https://github.com/leostella97/conceitosbd#depend%C3%AAncias-funcionais</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#problemas-da-redund%C3%A2ncia">Problemas da Redundância</a></li>
 </ul>
