@@ -185,7 +185,7 @@ A escolha da estratégia depende da <b>complexidade</b> do modelo de dados e das
 Exemplos:
 Vamos supor que estamos modelando um <b>sistema de gerenciamento</b> de uma biblioteca e queremos utilizar o conceito de <b>herança</b> no banco de dados para representar <i>diferentes tipos de usuários da biblioteca</i>.
 
-Começamos criando uma tabela para a entidade <b>"Usuário"</b>, que será a nossa <B>superclasse</. Ela terá os atributos comuns a todos os tipos de usuários:
+Começamos criando uma tabela para a entidade <b>"Usuário"</b>, que será a nossa <b>superclasse</b>. Ela terá os atributos comuns a todos os tipos de usuários:
 <code>
 	CREATE TABLE Usuario (
   id INT PRIMARY KEY,
