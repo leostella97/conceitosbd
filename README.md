@@ -42,6 +42,9 @@
 	<a href="https://github.com/leostella97/conceitosbd#normaliza%C3%A7%C3%A3o-de-banco-de-dados"><b>Normalização de Banco de Dados</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#depend%C3%AAncias-funcionais">Dependências Funcionais</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#problemas-da-redund%C3%A2ncia">Problemas da Redundância</a></li>
+	<a href=""><b>Transações & Gerenciamento de Banco de Dados usando MySQL</b></a>
+	<a href="">Transações de banco de dados com MySQL</a>
+	<a href="">Controle de Concorrência em Banco de Dados com MySQL</a>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
@@ -1204,6 +1207,120 @@ A redundância pode ter <b>alguns problemas</b>, incluindo:
 <b>• Falta de confiança:</b> Às vezes, a redundância pode levar à falta de confiança no sistema, pois pode haver a sensação de que a falha de um componente é apenas uma questão de tempo.
 
 Por esses motivos, é importante <b>avaliar cuidadosamente</b> os prós e contras antes de implementar a redundância em um sistema.
+
+## Transações & Gerenciamento de Banco de Dados usando MySQL
+Transações são usadas para <b>garantir a integridade</b> dos dados em um banco de dados. Elas são usadas para <b>agrupar uma ou mais</b> operações em <i>uma única unidade lógica de trabalho</i>, para que todas as operações sejam tratadas como uma <b>única transação</b>. Isso significa que, se <b>algo der errado</b> com uma das operações dentro da transação, todas as operações serão <b>revertidas</b>, garantindo que o banco de dados permaneça consistente.
+
+O gerenciamento de banco de dados <b>envolve uma série de tarefas</b>, como a <i>criação e a manutenção de tabelas, índices e restrições, bem como a execução de consultas e a atualização de dados</i>. O MySQL é um <b>sistema de gerenciamento de banco de dados relacional (SGBDR)</b> que oferece suporte a várias linguagens de programação, incluindo SQL. Ele também oferece várias ferramentas de gerenciamento, como o <b>MySQL Workbench</b>, para ajudar os usuários a gerenciar seus bancos de dados de forma eficaz.
+
+### Locking em Acesso Concomitante de Transações
+Locking em Acesso Concomitante de Transações no SQL é uma <b>técnica usada para garantir</b> que múltiplas transações que ocorrem simultaneamente em um banco de dados <b>não interfiram</b> umas com as outras.
+
+Quando várias transações estão <b>tentando acessar</b> os mesmos dados ao mesmo tempo, <i>pode haver conflitos e inconsistências nos resultados das transações</i>. Para <b>evitar</b> isso, o <b>locking</b> é usado para <b>bloquear o acesso</b> a esses dados enquanto uma transação está sendo executada.
+
+Existem dois tipos de locking: o <b>exclusivo</b> e o <b>compartilhado</b>. O locking exclusivo é usado quando uma transação <b>precisa modificar</b> dados em uma tabela, enquanto o locking compartilhado é usado quando uma transação <b>precisa apenas ler</b> dados da tabela.
+
+O locking exclusivo <b>garante que nenhuma outra</b> transação possa modificar os mesmos dados ao mesmo tempo. Já o locking compartilhado <b>permite que várias transações</b> leiam os mesmos dados ao mesmo tempo, mas <i>impede que uma transação modifique esses dados enquanto outra está lendo</i>.
+
+O locking pode ser implementado de várias maneiras, como usando comandos SQL específicos, como <b>"SELECT ... FOR UPDATE" ou "SELECT ... FOR SHARE"</b>, ou usando outras ferramentas, como <b>transações e controle de concorrência</b>. O objetivo principal do locking é <i>garantir a integridade dos dados e evitar conflitos</i> entre transações concorrentes.
+
+### O que são Transações em SQL?
+ Transação é uma <b>sequência lógica de operações</b> de banco de dados que são <i>tratadas como uma única unidade</i> de trabalho. As transações são usadas para <i>garantir a consistência e a integridade dos dados</i> no banco de dados.
+
+Uma transação geralmente <b>consiste em uma série de operações</b>, como <i>inserção, atualização ou exclusão de dados</i> em uma ou mais tabelas. Essas operações são agrupadas em uma única unidade de trabalho que <b>pode ser revertida</b> caso ocorra <i>algum erro ou problema</i> durante a execução da transação.
+
+O <b>principal objetivo</b> das transações é garantir que todas as operações de uma transação sejam <b>executadas com sucesso</b> ou, <b>caso contrário</b>, que todas as operações <b>sejam revertidas</b>. Isso ajuda a <i>garantir a integridade dos dados e a evitar problemas de inconsistência ou conflito de dados</i>.
+
+As transações são geralmente iniciadas com a instrução <b>"BEGIN TRANSACTION"</b> e podem ser confirmadas com a instrução <b>"COMMIT"</b> ou revertidas com a instrução <b>"ROLLBACK"</b>. Durante uma transação, outras transações podem ser bloqueadas de acessar os dados afetados pelas operações da transação em andamento.
+
+Concluindo sobre transações, em SQL são usadas para <b>garantir</b> a <i>integridade dos dados e a consistência das operações</i> de banco de dados, permitindo que várias operações sejam agrupadas em uma única unidade de trabalho que pode ser revertida caso ocorra algum erro ou problema.
+
+## Controle de Concorrência em Banco de Dados com MySQL
+O controle de concorrência em banco de dados é um <b>recurso importante</b> para <i>garantir a integridade dos dados quando vários usuários acessam o mesmo banco de dados simultaneamente</i>. No MySQL, existem <b>diferentes técnicas</b> de controle de concorrência disponíveis, como o <i>bloqueio de tabelas e o controle de transações</i>.
+
+O bloqueio de tabelas é uma <b>técnica simples</b>, mas pode afetar o desempenho do banco de dados. Quando uma <i>tabela é bloqueada, outros usuários não podem modificá-la até que o bloqueio seja liberado</i>. Isso garante a integridade dos dados, mas pode resultar em <b>longos tempos de espera</b> para os usuários que precisam acessar a tabela bloqueada.
+
+O controle de transações é outra <b>técnica de controle de concorrência comum</b> no MySQL. O controle de transações <b>permite</b> que várias transações <i>acessem simultaneamente</i> o banco de dados <b>sem interferir</b> na integridade dos dados. O MySQL usa o <i>mecanismo InnoDB por padrão</i>, que suporta transações <b>ACID (Atomicidade, Consistência, Isolamento e Durabilidade)</b>. O nível de isolamento padrão é o <b>REPEATABLE READ</b>, que garante que as leituras sempre retornem a mesma versão dos dados, <b>independentemente</b> de outras transações que estejam em andamento.
+
+Além disso, o MySQL oferece outras <b>opções de isolamento</b>, como o <b>READ COMMITTED</b> e o <b>SERIALIZABLE</b>. O <b>READ COMMITTED</b> permite que uma transação leia <i>apenas os dados que foram confirmados por outras transações</i>, enquanto o <b>SERIALIZABLE</b> garante que as transações <i>sejam executadas em série para evitar conflitos</i>.
+
+O controle de concorrência é um <b>recurso importante</b> para garantir a <i>integridade dos dados</i> em bancos de dados MySQL. O MySQL oferece <b>diferentes técnicas</b> de controle de concorrência, como o <i>bloqueio de tabelas e o controle de transações</i>, com diferentes níveis de isolamento para atender às necessidades dos usuários.
+
+### Schedules
+Em SQL, "schedules" refere-se a um <b>conjunto de instruções</b> ou <b>comandos que especificam</b> a ordem em que as operações devem ser realizadas em um banco de dados. Essas instruções podem incluir <i>consultas, atualizações, inserções ou exclusões de dados</i>.
+
+As schedules são <b>importantes</b> para garantir a integridade dos dados e evitar <b>problemas como conflitos</b> de <i>simultaneidade ou inconsistências</i>. Em outras palavras, eles garantem que as transações sejam <b>executadas corretamente e de maneira consistente</b>, sem interferir em outras transações que possam estar ocorrendo simultaneamente no banco de dados.
+
+As schedules podem ser criados <b>manualmente</b> ou por meio de sistemas de gerenciamento de banco de dados (SGBD). Alguns SGBD incluem recursos de controle de concorrência para <i>gerenciar schedules e garantir</i> que as transações sejam executadas de forma eficiente e segura.
+
+## MySQL Engines
+MySQL Engines são <b>componentes</b> do sistema de gerenciamento de banco de dados (SGBD) MySQL responsáveis pelo <i>armazenamento, organização e recuperação de dados</i>. O MySQL suporta diversos <b>tipos de engines</b>, cada um com suas próprias características e funcionalidades.
+
+Alguns exemplos de <b>MySQL Engines</b> incluem:
+
+<b>• MyISAM:</b> um engine que oferece alta velocidade de leitura e escrita, mas <i>não suporta</i> transações ACID ou controle de concorrência.
+
+<b>• InnoDB:</b> um engine que <i>suporta transações ACID, controle de concorrência e outras funcionalidades avançadas</i>, tornando-o uma escolha popular para aplicativos empresariais.
+
+<b>• Memory:</b> um engine que armazena os dados completamente na memória RAM, oferecendo <i>alta velocidade de acesso aos dados</i>, mas <b>sem suporte</b> a recursos avançados como transações ou índices.
+
+Cada engine tem suas próprias vantagens e desvantagens, e a escolha do engine correto depende das necessidades específicas do aplicativo.
+
+# Arquitetura do MySQL
+A arquitetura do MySQL é composta por <b>diversos componentes</b> que trabalham juntos para <b>gerenciar</b> o banco de dados. Esses componentes incluem:
+
+<b>• Servidor MySQL:</b> o servidor MySQL é o núcleo do sistema de gerenciamento de banco de dados. Ele é responsável por gerenciar todas as conexões de clientes, processar consultas SQL e manter os dados armazenados no banco de dados.
+
+<b>• MySQL Client:</b> o MySQL Client é um programa que permite aos usuários se conectar ao servidor MySQL e executar consultas SQL. Existem vários clientes disponíveis, incluindo o cliente de linha de comando e clientes gráficos de terceiros.
+
+<b>• Engines de Armazenamento:</b> como mencionado anteriormente, o MySQL suporta vários tipos de engines de armazenamento, que são responsáveis por armazenar, gerenciar e recuperar dados.
+
+<b>• Conectores:</b> os conectores são responsáveis por estabelecer a conexão entre o servidor MySQL e os aplicativos que usam o banco de dados. Existem conectores disponíveis para várias linguagens de programação, incluindo PHP, Java e Python.
+
+<b>• API do MySQL:</b> a API do MySQL é uma interface de programação que permite aos desenvolvedores criar aplicativos que interagem com o servidor MySQL. A API suporta várias linguagens de programação e oferece uma ampla variedade de funções para manipular dados no banco de dados.
+<code>
+	CREATE TABLE usuarios (
+  id INT NOT NULL AUTO_INCREMENT,
+  nome VARCHAR(50) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  senha VARCHAR(50) NOT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO usuarios (nome, email, senha) 
+VALUES ('Bilbo Bolseiro', 'bilbobolseiro@mordor.com', 'cachimbodapaz'),
+       ('Aragorn', 'smeagol@precioso.com', 'preciooooooso'),
+       ('Legolas', 'gandalf@mordor.com', 'youshallnotpass');
+</code>
+
+Este código cria uma tabela chamada <b>"usuarios"</b> com quatro colunas: <b>"id" (um identificador único para cada usuário), "nome", "email" e "senha"</b>. Em seguida, <b>insere três linhas</b> de dados na tabela usando o comando <b>INSERT INTO</b>.
+
+É importante notar que este é apenas um <b>exemplo básico</b> e que o código SQL pode se tornar muito mais complexo dependendo das <i>necessidades do aplicativo</i>. Além disso, é importante ter cuidado ao manipular dados em um banco de dados, especialmente quando se trata de <b>informações confidenciais</b> dos usuários.
+
+### Arquitetura do InnoDB
+A arquitetura do InnoDB é composta por <b>vários componentes</b> que trabalham juntos para garantir a <b>confiabilidade e o desempenho</b> do banco de dados. Aqui está uma visão geral dos principais componentes da arquitetura do InnoDB:
+
+<b>• Mecanismo de Armazenamento:</b> o InnoDB é um mecanismo de armazenamento transacional que suporta a integridade de dados por meio do uso de transações ACID. Ele é responsável por gerenciar a estrutura de armazenamento do banco de dados, incluindo <i>tabelas, índices e espaços de armazenamento</i>.
+
+<b>• Buffer Pool:</b> o buffer pool é uma área de memória na qual o <b>InnoDB</b> armazena cópias em cache das páginas de dados e índices do banco de dados. Isso ajuda a acelerar o acesso aos dados, reduzindo a necessidade de ler dados diretamente do disco.
+
+<b>Log de Transações:</b> o log de transações é uma parte crítica da <b>arquitetura do InnoDB</b>, pois é usado para <i>garantir a integridade dos dados em caso de falha do sistema</i>. Ele registra todas as transações no banco de dados, permitindo que o InnoDB <b>recupere os dados</b> para um estado consistente em caso de falha.
+
+<b>• Controle de Concorrência:</b> o InnoDB usa <b>várias técnicas</b> de <b>controle de concorrência</b> para garantir que várias transações possam ser <i>executadas simultaneamente sem causar problemas de consistência de dados</i>. Essas técnicas incluem <i>bloqueio de linha, bloqueio de leitura e bloqueio de gravação</i>.
+
+<b>• Recuperação Automática:</b> o InnoDB é capaz de <b>recuperar automaticamente</b> de falhas do sistema, incluindo falhas de hardware ou queda de energia. Ele faz isso por meio do <b>log de transações e do uso de checkpoints</b> regulares para salvar os dados no disco.
+
+<b>• Índices:</b> o InnoDB suporta a <b>criação</b> de vários índices em cada tabela, permitindo que as consultas sejam <b>executadas mais rapidamente</b>. O <b>InnoDB</b> <i>usa uma estrutura</i> de índice <b>B-tree</b> para armazenar e pesquisar índices.
+
+<b>• Multiversion Concurrency Control (MVCC):</b> o <b>InnoDB</b> usa o <b>MVCC</b> para fornecer um <i>alto nível de isolamento de transações</i>. Ele permite que várias transações acessem as mesmas tabelas simultaneamente <i>sem bloquear</i> umas às outras.
+
+<b>• Foreign Key Constraints:</b> o <b>InnoDB</b> suporta a criação de restrições de <b>chave estrangeira</b>, o que garante que os dados relacionais permaneçam <b>consistentes</b>. Quando uma tabela referenciada é <i>atualizada ou excluída</i>, o InnoDB <i>automaticamente realiza ações</i> de cascata nas tabelas dependentes para manter a <b>consistência de dados</b>.
+
+<b>• Espaços de Tabela:</b> o InnoDB <b>suporta a criação de espaços de tabela</b>, que são <b>partições lógicas</b> em uma tabela que permitem que diferentes partes da tabela sejam <i>armazenadas em locais diferentes</i> do disco.
+
+<b>• Compactação de Dados:</b> o InnoDB <b>suporta a compactação</b> de dados, o que permite que as tabelas sejam <b>compactadas</b> para economizar espaço em disco. A <b>compactação de dados</b> no InnoDB é feita em tempo real, <i>sem afetar o desempenho das consultas</i>.
+
+No geral, a <i>arquitetura do InnoDB</i> é altamente sofisticada e é projetada para garantir um <i>alto desempenho, confiabilidade e segurança dos dados</i> armazenados no banco de dados. Isso o torna uma escolha popular para aplicativos críticos e de alta carga.
 
 
 
