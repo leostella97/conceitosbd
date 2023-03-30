@@ -23,7 +23,7 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#case-statment">CASE Statment</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#o-caso-zeronull-trick">O Caso Zero/Null Trick</a></li>
 	<a href="https://github.com/leostella97/conceitosbd#personalizando-acessos-com-views"><b>Personalizando Acessos com Views</b></a>
-	<a href="https://github.com/leostella97/conceitosbd#overview-sobre-automa%C3%A7%C3%A3o-de-a%C3%A7%C3%B5es-com-triggers-no-mysql"><b>Overview sobre Automação de Ações com Triggers no MySQL</b></a>
+	<li><a href="https://github.com/leostella97/conceitosbd#overview-sobre-automa%C3%A7%C3%A3o-de-a%C3%A7%C3%B5es-com-triggers-no-mysql"><b>Overview sobre Automação de Ações com Triggers no MySQL</b></a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#assertions-e-triggers">Assertions e Triggers</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#funcionamento-de-assertions">Funcionamento de Assertions</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#especificando-constraints-com-triggers">Especificando Constraints com Triggers</a></li>
@@ -47,7 +47,7 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#o-que-s%C3%A3o-transa%C3%A7%C3%B5es-em-sql">O que são Transações em SQL?</a></li>
 	<a href="https://github.com/leostella97/conceitosbd#controle-de-concorr%C3%AAncia-em-banco-de-dados-com-mysql"><b>Controle de Concorrência em Banco de Dados com MySQL</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#schedules">Schedules</a></li>
-	<a href="https://github.com/leostella97/conceitosbd#mysql-engines">MySQL Engines</a>
+	<a href="https://github.com/leostella97/conceitosbd#mysql-engines"><b>MySQL Engines</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#arquitetura-do-mysql">Arquitetura do MySQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#arquitetura-do-innodb">Arquitetura do InnoDB</a></li>
 </ul>
