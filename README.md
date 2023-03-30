@@ -987,5 +987,57 @@ Resumindo o que foi falado, a automação de ações com triggers no MySQL é um
 
 Em resumo, as "assertions" são usadas para <b>definir restrições</b> declarativas sobre os dados em uma tabela, enquanto os "triggers" são usados para <b>executar ações personalizadas</b> em resposta a eventos específicos. Ambos são recursos poderosos do SQL que permitem que você crie sistemas de banco de dados mais <i>robustos e confiáveis</i>.
 
+### Funcionamento de Assertions
+Assertions são <b>declarações que especificam condições</b> que devem ser <B>verdadeiras</B> após a conclusão de uma transação. As assertions são usadas para <i>garantir que o estado</i> do banco de dados <i>esteja sempre em conformidade</i> com certas restrições.
+
+As assertions são <b>semelhantes às restrições</b>, mas <b>diferem no momento</b> em que são verificadas. As restrições são verificadas durante as operações de <i>inserção, atualização ou exclusão</i> de dados, enquanto as assertions são <b>verificadas após a conclusão</b> de uma transação.
+
+As assertions são criadas usando a <b>cláusula CREATE ASSERTION</b>, seguida de uma <i>expressão booleana que deve ser verdadeira</i> após a conclusão de uma transação. Por exemplo, a seguinte assertion garante que o preço dos produtos nunca seja negativo:
+<code>
+CREATE ASSERTION preço_não_negativo
+CHECK (NOT EXISTS (SELECT * FROM produtos WHERE preço < 0));
+</code>
+
+Se uma transação <b>violar</b> uma assertion, a transação será <b>revertida</b> e um <i>erro será gerado</i>. As assertions são <b>úteis para garantir</b> que o banco de dados esteja sempre em um estado consistente e para <b>evitar</b> que <i>dados inválidos sejam inseridos</i> no banco de dados.
+
+### Especificando Constraints com Triggers
+Os triggers são <b>objetos executados automaticamente</b> quando ocorre um evento específico, como uma <i>inserção, atualização ou exclusão</i> de dados de uma tabela. Eles podem ser usados para especificar <b>constraints adicionais</b> em uma tabela, além das que foram definidas quando a tabela foi criada.
+
+Por exemplo, suponha que você tenha uma tabela <b>"Funcionários"</b> com uma coluna <b>"Salário"</b> e que queira garantir que nenhum funcionário receba um salário <b>abaixo do mínimo legal</b>. Você pode definir uma <b>constraint CHECK</b> na criação da tabela para garantir isso. No entanto, se você quiser ter certeza de que essa constraint é sempre respeitada, mesmo se alguém <i>atualizar a tabela manualmente</i>, você pode criar um <b>trigger AFTER UPDATE</b> que verifique se o salário atualizado <i>respeita a constraint</i>.
+
+Outro exemplo seria uma <b>tabela de pedidos</b>, em que você deseja garantir que a quantidade de itens em um pedido <b>não seja maior</b> do que o estoque disponível. Neste caso, você pode criar um <b>trigger BEFORE INSERT</b> que verifique se a quantidade de itens solicitados não excede o estoque disponível <b>antes de permitir</b> que o pedido seja adicionado à tabela.
+
+Os triggers podem ser usados para <b>complementar as constraints</b> existentes em uma tabela e <b>garantir</b> que os dados permaneçam consistentes, <b>mesmo quando são modificados</b> fora do controle do aplicativo.
+
+### Exemplo de Trigger BEFORE INSERT no MySQL
+Suponha que temos uma tabela chamada <b>"clientes"</b> com as seguintes colunas: <b>"id", "nome", "email" e "telefone"</b>. Queremos que, antes de um <i>novo registro ser inserido</i> na tabela <b>"clientes"</b>, seja verificado se o email já existe na tabela. Se existir, a inserção deve ser cancelada e uma mensagem de erro deve ser exibida.
+
+Para isso, podemos criar o seguinte Trigger:
+<code>
+	CREATE TRIGGER antes_de_inserir_cliente
+	BEFORE INSERT ON clientes
+	FOR EACH ROW
+	BEGIN
+  	IF EXISTS (SELECT * FROM clientes WHERE email = NEW.email) THEN
+    	SIGNAL SQLSTATE '45000' 
+      	SET MESSAGE_TEXT = 'Já existe um cliente cadastrado com esse e-mail.';
+  	END IF;
+END;
+</code>
+
+<b>• antes_de_inserir_cliente</b> é o nome do Trigger que estamos criando.
+<b>• BEFORE INSERT</b> indica que o Trigger será executado antes de um novo registro ser inserido na tabela "clientes".
+<br>
+<b>• FOR EACH ROW</b> indica que o Trigger será executado para cada linha que for inserida na tabela.
+<br>
+<b>• IF EXISTS</b> verifica se já existe um registro na tabela com o email que está sendo inserido (usando a variável NEW.email, que representa o valor que será inserido na coluna "email").
+<br>
+<b>• SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = </b> é uma forma de gerar um erro personalizado. O código SQLSTATE '45000' indica que ocorreu um erro definido pelo usuário, e a mensagem de erro será 'Já existe um cliente cadastrado com esse e-mail.'.
+Dessa forma, se alguém tentar inserir um novo registro na tabela "clientes" com um email que já existe, o Trigger será acionado e a inserção será cancelada, exibindo a mensagem de erro <b>'Já existe um cliente cadastrado com esse e-mail.'</b>.
+
+### Exemplo de Trigger AFTER INSERT no MySQL
+
+
 <br><br><br>
-Agradecimentos a <a href="https://dio.me">DIO - Digital Inovation One</a> pelo conhecimento
+Agradecimentos a <a target="_blank" href="https://dio.me">DIO - Digital Inovation One</a> pelo conhecimento
+
