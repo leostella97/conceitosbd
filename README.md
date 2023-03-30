@@ -31,6 +31,7 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-after-insert-no-mysql">Exemplo de Trigger AFTER INSERT no MySQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-before-update-trigger-no-mysql">Exemplo de Trigger BEFORE UPDATE TRIGGER no MySQL</a></li>
 	<a href="">Fundamentos de Indexação SGBDs com MySql</a>
+	<a href="">Normalização de Banco de Dados</a>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
@@ -1147,6 +1148,54 @@ ALTER TABLE clientes ADD INDEX idx_idade USING HASH (idade);
 Esse comando <b>adiciona um índice</b> na coluna <b>"idade"</b> usando a <b>função hash</b>. A função hash <b>converte o valor</b> da coluna em um <b>número inteiro</b>, que é usado para <b>indexar os valores</b> na tabela. Esse tipo de índice <i>pode ser muito útil para consultas que usam igualdade</i> (por exemplo, <b>WHERE idade = 30</b>), pois permite que o MySQL localize rapidamente as linhas correspondentes na tabela.
 
 Observe que, ao contrário dos <b>índices B-tree</b>, os índices hash <b>não são ordenados</b>. Isso significa que eles não são adequados para consultas que exigem uma classificação específica (por exemplo, <b>ORDER BY idade</b>). Além disso, os índices hash só são eficientes para consultas que usam igualdade; eles não são úteis para consultas que usam operadores como <b>"<" ou ">"</b>.
+
+## Normalização de Banco de Dados
+A Normalização de Banco de Dados é um processo utilizado para <b>organizar os dados</b> em um banco de dados relacional de forma a <i>minimizar a redundância e evitar problemas</i> de inconsistência nos dados.
+
+Existem <b>várias formas de normalização</b>, sendo as mais comuns a <b>primeira forma normal (1FN), segunda forma normal (2FN) e terceira forma normal (3FN)</b>. Cada forma normal possui um <b>conjunto de regras</b> que devem ser seguidas para que um banco de dados esteja normalizado.
+
+<b>Na primeira forma normal</b>, cada atributo em uma tabela deve ter apenas um valor. <b>Na segunda forma normal</b>, a tabela deve ter uma <i>chave primária e todos os outros atributos</i> devem depender funcionalmente dessa chave primária. <b>Na terceira forma normal</b>, todos os atributos devem depender funcionalmente <i>apenas da chave primária e não de outros atributos</i>.
+
+A <b>normalização</b> de banco de dados ajuda a <b>melhorar a performance</b> do banco de dados, <i>reduzindo o espaço ocupado em disco e melhorando a eficiência das consultas</i>. Além disso, um banco de dados normalizado é menos propenso a erros e inconsistências nos dados.
+
+No entanto, é <b>importante</b> lembrar que a normalização <b>não é uma solução</b> para todos os problemas de banco de dados. Em alguns casos, a normalização <i>pode resultar em um grande número de tabelas pequenas</i>, o que pode <b>prejudicar a performance</b> do banco de dados em determinadas situações. É importante encontrar um equilíbrio entre a <i>normalização e a performance</i> do banco de dados para obter o melhor resultado.
+
+Para garantir um <i>bom desempenho</i> do banco de dados normalizado, é necessário levar em consideração o uso de <i>índices, chaves estrangeiras, junções e outras técnicas de otimização de consultas</i>.
+
+Outro aspecto <b>importante</b> a ser considerado é o <b>processo de denormalização</b>, que é a <B>reversão do processo</B> de normalização. Em alguns casos, pode ser necessário denormalizar o banco de dados para <i>melhorar a performance ou simplificar a consulta de dados</i>. No entanto, é <b>importante lembrar</b> que a denormalização deve ser feita com <b>cuidado</b>, pois pode <i>aumentar a redundância de dados e aumentar o risco</i> de inconsistências nos dados.
+
+Além disso, a normalização de banco de dados é um <b>processo contínuo</b>. À medida que novos requisitos surgem, é possível que seja necessário <i>alterar a estrutura do banco de dados para atender às novas demandas</i>. É importante estar sempre atento às <b>mudanças e atualizar</b> a estrutura do banco de dados de acordo.
+
+Resumindo, normalização de banco de dados é um <b>processo fundamental</b> para garantir a <i>integridade dos dados, melhorar a performance do banco de dados e evitar problemas de inconsistência nos dados</i>. No entanto, é <b>importante</b> encontrar um equilíbrio entre a <i>normalização e a performance</i> do banco de dados para <b>obter</b> o melhor resultado.
+
+Para terminar a introdução da normalização, é importante falar sobre a <b>normalização de Boyce-Codd</b>
+A normalização de Boyce-Codd é uma técnica utilizada para <b>projetar bancos de dados relacionais</b> de forma a <b>evitar anomalias de atualização</b>. Essa técnica é baseada na <b>dependência funcional</b> entre os atributos de uma relação.
+
+Em uma relação, um <b>conjunto de atributos</b> é dito determinante se ele determina de forma única os valores dos demais atributos da relação. A normalização de Boyce-Codd <b>exige que todas</b> as dependências funcionais <b>não triviais</b> em uma relação <i>sejam determinadas por sua chave primária</i>.
+
+Dessa forma, a normalização de Boyce-Codd <b>evita anomalias</b> de atualização, como a <i>inserção, exclusão ou modificação de dado</i>s que levem a inconsistências no banco de dados. Além disso, essa técnica permite que as relações sejam <b>divididas</b> em <i>relações menores e mais simples</i>, o que pode <b>facilitar a manutenção</b> do banco de dados e <b>melhorar o desempenho</b> das consultas.
+
+### Dependências Funcionais
+Dependências funcionais são <b>restrições que definem a relação</b> entre as colunas em uma tabela de banco de dados. Uma dependência funcional <i>afirma que o valor de uma determinada coluna ou conjunto de colunas é determinado pelo valor de outra coluna ou conjunto de colunas na mesma tabela</i>. Em outras palavras, se <b>soubermos o valor</b> de uma coluna, <b>podemos determinar</b> o valor de outra coluna relacionada a ela.
+
+As dependências funcionais são <b>importantes</b> para <i>garantir a integridade dos dados</i> em um banco de dados e <i>ajudam a evitar inconsistências e redundâncias</i> nos dados. Elas também são usadas para <i>otimizar consultas SQL</i>, permitindo que o banco de dados execute consultas <b>mais rapidamente e com maior eficiência</b>. Para implementar dependências funcionais em uma tabela, são usados os conceitos de <b>chaves primárias, chaves estrangeiras e índices</b>.
+
+### Problemas da Redundância
+A redundância pode ter <b>alguns problemas<b>, incluindo:
+
+<b>• Custo:</b> A redundância pode aumentar os custos, já que é necessário ter duplicação de equipamentos, sistemas e/ou recursos para garantir a continuidade do serviço.
+<br>
+<b>• Complexidade:</b> A duplicação pode tornar o sistema mais complexo e difícil de gerenciar, especialmente em casos em que há muitos componentes redundantes.
+<br>
+<b>• Sincronização:</b> Para garantir que todos os componentes redundantes estejam sincronizados, é necessário ter um sistema de comunicação eficiente. Caso contrário, pode haver problemas de inconsistência de dados e degradação do desempenho.
+<br>
+<b>• Falhas em cascata:</b> Se um dos componentes redundantes falhar, pode ocorrer uma falha em cascata que afeta todo o sistema.
+<br>
+<b>• Falta de confiança:</b> Às vezes, a redundância pode levar à falta de confiança no sistema, pois pode haver a sensação de que a falha de um componente é apenas uma questão de tempo.
+
+Por esses motivos, é importante <b>avaliar cuidadosamente</b> os prós e contras antes de implementar a redundância em um sistema.
+
+
 
 
 
