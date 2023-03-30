@@ -42,9 +42,14 @@
 	<a href="https://github.com/leostella97/conceitosbd#normaliza%C3%A7%C3%A3o-de-banco-de-dados"><b>Normalização de Banco de Dados</b></a>
 	<li><a href="https://github.com/leostella97/conceitosbd#depend%C3%AAncias-funcionais">Dependências Funcionais</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#problemas-da-redund%C3%A2ncia">Problemas da Redundância</a></li>
-	<a href=""><b>Transações & Gerenciamento de Banco de Dados usando MySQL</b></a>
-	<a href="">Transações de banco de dados com MySQL</a>
-	<a href="">Controle de Concorrência em Banco de Dados com MySQL</a>
+	<a href="https://github.com/leostella97/conceitosbd#transa%C3%A7%C3%B5es--gerenciamento-de-banco-de-dados-usando-mysql"><b>Transações & Gerenciamento de Banco de Dados usando MySQL</b></a>
+	<li><a href="https://github.com/leostella97/conceitosbd#locking-em-acesso-concomitante-de-transa%C3%A7%C3%B5es">Locking em Acesso Concomitante de Transações</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#o-que-s%C3%A3o-transa%C3%A7%C3%B5es-em-sql">O que são Transações em SQL?</a></li>
+	<a href="https://github.com/leostella97/conceitosbd#controle-de-concorr%C3%AAncia-em-banco-de-dados-com-mysql"><b>Controle de Concorrência em Banco de Dados com MySQL</b></a>
+	<li><a href="https://github.com/leostella97/conceitosbd#schedules">Schedules</a></li>
+	<a href="https://github.com/leostella97/conceitosbd#mysql-engines">MySQL Engines</a>
+	<li><a href="https://github.com/leostella97/conceitosbd#arquitetura-do-mysql">Arquitetura do MySQL</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#arquitetura-do-innodb">Arquitetura do InnoDB</a></li>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
