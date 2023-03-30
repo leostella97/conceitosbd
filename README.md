@@ -29,7 +29,8 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#especificando-constraints-com-triggers">Especificando Constraints com Triggers</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-before-insert-no-mysql">Exemplo de Trigger BEFORE INSERT no MySQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-after-insert-no-mysql">Exemplo de Trigger AFTER INSERT no MySQL</a></li>
-	<li><a href="
+	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-before-update-trigger-no-mysql">Exemplo de Trigger BEFORE UPDATE TRIGGER no MySQL</a></li>
+	<a href="">Fundamentos de Indexação SGBDs com MySql</a>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
@@ -1072,6 +1073,82 @@ END;
 Neste exemplo, o trigger é criado com o nome <b>"antes_atualizar_cliente"</b> e é acionado antes de uma <b>atualização (UPDATE)</b> ser feita na tabela <b>"clientes"</b>. A <b>condição IF</b> verifica se o novo valor da coluna <b>"idade"</b> é menor do que zero. Se isso for verdadeiro, o <b>sinalizador (SIGNAL)</b> é acionado, com a mensagem de erro <b>'A idade não pode ser negativa'</b>.
 
 Dessa forma, se alguém tentar atualizar a idade de um cliente para um <b>valor negativo</b>, o trigger irá <b>impedir</b> a atualização e exibirá a mensagem de erro <b>'A idade não pode ser negativa'</b>.
+
+## Fundamentos de Indexação SGBDs com MySql
+Indexação é um <b>recurso importante</b> em <b>sistemas de gerenciamento de bancos de dados (SGBDs)</b> para <b>melhorar a eficiência</b> das consultas. O MySql é um SGBD popular que oferece suporte a vários tipos de índices para melhorar o desempenho de consultas, por isso vamos utiliza-lo.
+
+Os índices são <b>estruturas de dados</b> que armazenam as chaves de colunas e apontam para as linhas correspondentes na tabela. Eles são criados <i>usando uma ou mais colunas da tabela e permitem que o SGBD localize rapidamente</i> as linhas relevantes durante uma consulta.
+
+O MySql suporta diferentes <b>tipos de índices</b>, incluindo <i>índices primários, índices secundários e índices em texto completo</i>. O <b>índice primário</b> é criado automaticamente quando uma tabela é criada e é baseado em uma coluna que tem uma <b>restrição de chave primária</b>. Ele garante que cada linha na tabela tenha um valor exclusivo para essa coluna.
+
+Os <b>índices secundários</b> são criados para <b>melhorar o desempenho de consultas</b> que envolvem outras colunas além da chave primária. Eles podem ser criados em uma ou mais colunas e <b>permitem</b> que o SGBD <b>execute consultas</b> mais rapidamente, pois as linhas relevantes são <i>encontradas mais rapidamente</i>.
+
+Os <b>índices em texto</b> completo são usados para <i>pesquisar texto em uma ou mais colunas de texto</i>. Eles permitem que o SGBD <i>execute consultas</i> de pesquisa de texto mais rapidamente, pois mantêm um índice de palavras <i>em vez de uma lista</i> de valores de coluna.
+
+Ao <b>criar índices</b> no MySql, é <b>importante considerar</b> o tamanho da tabela e o número de consultas executadas. <i>Índices demais podem aumentar</i> o tempo de inserção de dados, enquanto <i>índices insuficientes podem resultar</i> em tempo de consulta mais longo.
+
+A indexação é uma <b>técnica essencial</b> para melhorar o desempenho das consultas em SGBDs como o MySql. Ao escolher os <i>tipos de índices e as colunas</i> a serem indexadas, é importante equilibrar o tamanho da tabela e o número de consultas para obter o <b>melhor desempenho</b> geral.
+
+### Exemplo de Índice com SQL no MySQL
+<code>
+	CREATE INDEX idx_email ON clientes (email);
+</code>
+Explicando cada parte do comando:
+
+<b>• CREATE INDEX:</b> indica que estamos criando um novo índice.
+<br>
+<b>• idx_email:</b> é o nome que estamos dando ao índice. Pode ser qualquer nome válido, desde que seja único dentro da tabela.
+<br>
+<b>• ON clientes:</b> indica em qual tabela estamos criando o índice.
+<br>
+<b>• (email)</b> é a coluna em que estamos criando o índice.
+
+### Índices Primários
+Índice primário é um <b>tipo especial de índice</b> que é usado para <b>identificar exclusivamente</b> cada registro em uma tabela. Ele é criado em <b>uma ou mais</b> colunas da tabela e é usado para <b>garantir a integridade</b> dos dados e <b>acelerar o acesso</b> aos registros.
+
+O índice primário é geralmente <b>criado automaticamente</b> quando uma tabela é criada, mas também pode ser <b>criado manualmente</b> especificando as colunas que serão usadas como <b>chave primária</b>. Quando um índice primário é criado, ele <i>também cria uma restrição de chave primária na tabela</i>, que impede que valores duplicados sejam inseridos na coluna ou colunas que compõem a chave primária.
+
+Usar um índice primário em uma tabela é uma <b>prática recomendada</b> para garantir que as operações de consulta e atualização sejam realizadas de forma <i>eficiente e segura</i>. Além disso, o índice primário é frequentemente usado como <i>referência para criar relacionamentos entre tabelas</i> em um banco de dados.
+
+### Índices Clusterizados
+Um índice clusterizado é um <b>tipo de índice que reorganiza fisicamente</b> as linhas de uma tabela <b>de acordo com a ordem</b> do índice. Isso significa que as linhas da tabela são <i>armazenadas em ordem sequencial</i> com base na chave primária ou em outra coluna definida como índice clusterizado.
+
+Essa <b>organização física</b> das linhas torna a recuperação de dados <i>mais rápida quando as consultas usam o índice clusterizado</i>. No entanto, a criação de um índice clusterizado <i>pode afetar o desempenho da inserção de novos dados</i> na tabela, já que a inserção de uma nova linha <b>pode exigir a reorganização</b> de toda a tabela para <b>manter</b> a ordem do índice.
+
+### Índices Secundários
+Índice secundário (também conhecido como <b>índice não clusterizado</b>) é um tipo de índice que é <i>criado em uma coluna ou conjunto de colunas que não fazem parte da chave primária da tabela</i>. Esse tipo de índice é usado para <i>melhorar o desempenho de consultas</i> que envolvem colunas que não são únicas ou que não são frequentemente usadas em cláusulas de junção.
+
+Ao contrário dos índices primários, que são criados automaticamente quando uma chave primária é definida, os <b>índices secundários devem ser criados explicitamente</b> pelo administrador do banco de dados ou pelo desenvolvedor. Embora os índices secundários possam melhorar o desempenho de consultas, eles também têm um <i>custo em termos de espaço em disco e tempo de atualização durante a inserção, atualização ou exclusão de registros</i>.
+
+### Índices Multinível
+Índices Multinível são <b>índices que são criados em várias colunas</b> em uma tabela para <b>melhorar o desempenho</b> das consultas. Eles são chamados de multinível porque cada coluna de índice <b>pode ter várias</b> colunas de índice filhas associadas a ela. Esses índices <i>são usados para buscar registros</i> de uma tabela com base em vários critérios de pesquisa, em vez de apenas um.
+
+Ao criar índices multinível, o banco de dados pode <b>acessar as informações</b> de forma mais <b>eficiente e rápida</b>, reduzindo o tempo necessário para executar consultas complexas. No entanto, é importante lembrar que a criação de índices multinível <i>pode exigir mais espaço de armazenamento e pode aumentar o tempo necessário para inserir ou atualizar dados na tabela</i>. Portanto, é importante <b>equilibrar</b> a necessidade de melhorar o desempenho da consulta com o impacto potencial nos outros processos do banco de dados.
+
+### índices únicos e Multicolunas
+Índice único é um índice que <b>garante que não tenha</b> valores duplicados em uma coluna específica da tabela. Isso significa que cada valor nessa coluna <b>aparece apenas uma vez</b> na tabela.
+
+Por outro lado, um índice de várias colunas, também conhecido como índice composto, é um índice que <b>abrange mais de uma coluna</b> em uma tabela. Isso significa que a combinação dessas colunas <b>deve ser única em cada registro</b>. Por exemplo, um índice de várias colunas pode ser criado em uma tabela de pedidos com as colunas <b>"id do cliente" e "data do pedido"</b>, para garantir que cada cliente faça apenas um pedido por dia.
+
+Índices únicos <i>garantem a unicidade de valores em uma coluna específica</i>, enquanto índices de várias colunas <i>garantem a unicidade de combinações específicas de valores em mais de uma coluna</i>. Ambos podem <b>melhorar significativamente</b> o desempenho de consultas em tabelas grandes.
+
+### ´´Indice Bitmap
+Índice bitmap é uma técnica usada em bancos de dados relacionais para <b>melhorar o desempenho</b> de consultas que envolvem <b>operações lógicas</b> de <b>"AND"</b> e <b>"OR"</b> em colunas de uma tabela.
+
+Basicamente, um índice bitmap <b>cria uma tabela de bits</b> para cada valor distinto em uma coluna da tabela. Cada bit na tabela é definido como "1" se a linha da tabela correspondente tem o valor da coluna correspondente e "0" caso contrário (1 para verdadeiro e 0 para false). Quando uma consulta é <b>executada com uma operação lógica "AND" ou "OR"</b>, o banco de dados pode usar as tabelas de bits correspondentes para a coluna para <b>determinar rapidamente</b> quais linhas atendem às condições da consulta.
+
+Embora o índice bitmap possa <b>melhorar o desempenho</b> de consultas específicas, ele também tem <b>algumas desvantagens</b>. A <i>criação e manutenção dos índices</i> bitmap podem ser <i>demoradas e consumir muito espaço em disco</i>, especialmente para tabelas grandes com muitos valores distintos em uma coluna. Além disso, os índices bitmap podem não ser eficazes para consultas que envolvem <b>operações de comparação</b>, como "<code><" or "></code>", ou para tabelas com muitas atualizações frequentes, pois as tabelas de bits <b>precisam ser atualizadas</b> sempre que ocorrem alterações na tabela.
+
+### Exemplo com Índices HASH com SQL no MySQL
+<code>
+ALTER TABLE clientes ADD INDEX idx_idade USING HASH (idade);
+</code>
+
+Esse comando <b>adiciona um índice</b> na coluna <b>"idade"</b> usando a <b>função hash</b>. A função hash <b>converte o valor</b> da coluna em um <b>número inteiro</b>, que é usado para <b>indexar os valores</b> na tabela. Esse tipo de índice <i>pode ser muito útil para consultas que usam igualdade</i> (por exemplo, <b>WHERE idade = 30</b>), pois permite que o MySQL localize rapidamente as linhas correspondentes na tabela.
+
+Observe que, ao contrário dos <b>índices B-tree</b>, os índices hash <b>não são ordenados</b>. Isso significa que eles não são adequados para consultas que exigem uma classificação específica (por exemplo, <b>ORDER BY idade</b>). Além disso, os índices hash só são eficientes para consultas que usam igualdade; eles não são úteis para consultas que usam operadores como <b>"<" ou ">"</b>.
+
+
 
 
 <br><br><br>
