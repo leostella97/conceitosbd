@@ -30,8 +30,18 @@
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-before-insert-no-mysql">Exemplo de Trigger BEFORE INSERT no MySQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-after-insert-no-mysql">Exemplo de Trigger AFTER INSERT no MySQL</a></li>
 	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-trigger-before-update-trigger-no-mysql">Exemplo de Trigger BEFORE UPDATE TRIGGER no MySQL</a></li>
-	<a href="">Fundamentos de Indexação SGBDs com MySql</a>
-	<a href="">Normalização de Banco de Dados</a>
+	<a href="https://github.com/leostella97/conceitosbd#fundamentos-de-indexa%C3%A7%C3%A3o-sgbds-com-mysql">Fundamentos de Indexação SGBDs com MySql</a>
+	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-de-%C3%ADndice-com-sql-no-mysql">Exemplo de Índice com SQL no MySQL</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#%C3%ADndices-prim%C3%A1rios">Índices Primários</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#%C3%ADndices-clusterizados">Índices Clusterizados</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#%C3%ADndices-secund%C3%A1rios">Índices Secundários</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#%C3%ADndices-multin%C3%ADvel">Índices Multinível</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#%C3%ADndices-%C3%BAnicos-e-multicolunas">índices únicos e Multicolunas</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#indice-bitmap">Índice Bitmap</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#exemplo-com-%C3%ADndices-hash-com-sql-no-mysql">Exemplo com Índices HASH com SQL no MySQL</a></li>
+	<a href="https://github.com/leostella97/conceitosbd#normaliza%C3%A7%C3%A3o-de-banco-de-dados">Normalização de Banco de Dados</a>
+	<li><a href="https://github.com/leostella97/conceitosbd#depend%C3%AAncias-funcionais">https://github.com/leostella97/conceitosbd#depend%C3%AAncias-funcionais</a></li>
+	<li><a href="https://github.com/leostella97/conceitosbd#problemas-da-redund%C3%A2ncia">Problemas da Redundância</a></li>
 </ul>
 
 <b>Banco de dados</b> é um <i>conjunto organizado</i> de informações que são armazenadas em um sistema de computador. Essas informações são <b>estruturadas</b> de tal forma que podem ser <i>facilmente acessadas, gerenciadas e atualizadas</i>.
@@ -1181,7 +1191,7 @@ Dependências funcionais são <b>restrições que definem a relação</b> entre 
 As dependências funcionais são <b>importantes</b> para <i>garantir a integridade dos dados</i> em um banco de dados e <i>ajudam a evitar inconsistências e redundâncias</i> nos dados. Elas também são usadas para <i>otimizar consultas SQL</i>, permitindo que o banco de dados execute consultas <b>mais rapidamente e com maior eficiência</b>. Para implementar dependências funcionais em uma tabela, são usados os conceitos de <b>chaves primárias, chaves estrangeiras e índices</b>.
 
 ### Problemas da Redundância
-A redundância pode ter <b>alguns problemas<b>, incluindo:
+A redundância pode ter <b>alguns problemas</b>, incluindo:
 
 <b>• Custo:</b> A redundância pode aumentar os custos, já que é necessário ter duplicação de equipamentos, sistemas e/ou recursos para garantir a continuidade do serviço.
 <br>
